@@ -1,0 +1,1796 @@
+<meta charset="utf-8">
+<title>GIMA Website Moodboard</title>
+<meta name="description" content="Moodboard for the GIMA website: direction, colour, type, photography, drawing marks, portfolio, 3D and open questions.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Hanken+Grotesk:wght@300..700&family=IBM+Plex+Sans:wdth,wght@85..100,100..700&family=IBM+Plex+Sans+Arabic:wght@400;500;700&family=Noto+Kufi+Arabic:wght@800&display=swap">
+<style>
+:root{
+  --black:#0B0B0B; --white:#FFFFFF; --red:#D72A27; --graphite:#161616; --line:#2B2B2B;
+  --dim:#9A9A9A; --sheet-grey:#5C5C5C; --ink-14:rgba(11,11,11,.14);
+  --f-display:"Archivo","Arial Narrow","Helvetica Neue",Arial,sans-serif;
+  --f-text:"Hanken Grotesk","Helvetica Neue",Arial,sans-serif;
+  --f-util:"IBM Plex Sans","Helvetica Neue",Arial,sans-serif;
+  --f-ar:"IBM Plex Sans Arabic","Noto Sans Arabic",Tahoma,sans-serif;
+  --gutter:clamp(16px,2.6vw,40px);
+  --gap:clamp(16px,1.8vw,24px);
+  --ease-draw:cubic-bezier(.65,0,.35,1);
+  --ease-fill:cubic-bezier(.2,.8,.2,1);
+  color-scheme:dark;
+}
+html{background:var(--black)}
+body{background:var(--black);color:var(--white);font-family:var(--f-text);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+@media (min-width:900px){body{font-size:17px}}
+main{overflow-x:clip}
+.wrap{max-width:1440px;margin-inline:auto;padding-inline:var(--gutter)}
+a{color:inherit}
+p{margin:0;max-width:68ch}
+ul,ol{margin:0;padding:0}
+figure{margin:0}
+img{display:block}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------- type ---------- */
+.display{font-family:var(--f-display);font-stretch:62%;font-weight:800;text-transform:uppercase;line-height:.88;letter-spacing:-.01em;margin:0}
+h1.display{font-size:clamp(64px,11.5vw,188px)}
+h2{font-family:var(--f-display);font-stretch:62%;font-weight:700;text-transform:uppercase;font-size:clamp(38px,5vw,72px);line-height:.95;margin:0;text-wrap:balance;letter-spacing:-.005em}
+h3{font-family:var(--f-display);font-stretch:100%;font-weight:600;text-transform:uppercase;font-size:clamp(17px,1.5vw,21px);line-height:1.15;letter-spacing:.01em;margin:0;text-wrap:balance}
+.label{font-family:var(--f-util);font-weight:500;font-size:12px;line-height:1.4;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);font-variant-numeric:tabular-nums}
+.label.lead-red::before{content:"";display:inline-block;width:24px;height:1px;background:var(--red);vertical-align:middle;margin-right:10px;transform:translateY(-1px)}
+.lead{font-weight:400;font-size:clamp(19px,1.8vw,25px);line-height:1.38;max-width:34ch;text-wrap:pretty}
+@media (min-width:900px){.lead{font-weight:300}}
+.body-dim{color:var(--dim)}
+.num{font-family:var(--f-util);font-variant-numeric:tabular-nums}
+.ph{color:var(--dim);font-family:var(--f-util);font-size:.86em;letter-spacing:.02em}
+
+/* ---------- header ---------- */
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px 24px;flex-wrap:wrap;padding-block:18px;border-bottom:1px solid var(--line)}
+header.wrap{display:block}
+.brand{display:flex;align-items:center;gap:16px;text-decoration:none}
+.brand img{width:72px;height:48px}
+.lockup{border-left:1px solid var(--white);padding-left:16px;display:none}
+.lockup b{display:block;font-family:var(--f-display);font-stretch:100%;font-weight:700;font-size:15px;letter-spacing:.01em;line-height:1.2}
+.lockup span{display:block;font-family:var(--f-util);font-size:10px;letter-spacing:.06em;color:var(--white)}
+@media (min-width:720px){.lockup{display:block}}
+.top-right{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.anim-set{display:flex;align-items:center;gap:10px}
+.seg{display:inline-flex;border:1px solid var(--line)}
+.seg button{background:none;border:0;padding:0 12px;min-height:36px;font-family:var(--f-util);font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--dim);cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--white);color:var(--black)}
+@media (pointer:coarse){.seg button{min-height:44px}}
+
+/* ---------- plates, ticks ---------- */
+.plate{position:relative;aspect-ratio:3/2;background:var(--graphite);max-width:100%}
+.plate>img,.plate>.layer>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.plate::after{content:"";position:absolute;inset:0;pointer-events:none;box-shadow:inset 0 0 0 1px rgba(255,255,255,.06)}
+.r11{aspect-ratio:1/1}.r45{aspect-ratio:4/5}.r219{aspect-ratio:21/9}
+.ticked{position:relative}
+.tk{position:absolute;width:16px;height:1.5px;background:var(--white);pointer-events:none;z-index:3}
+.tk.tl{left:-8px;top:-.75px;transform:rotate(-45deg)}
+.tk.tr{right:-8px;top:-.75px;transform:rotate(-45deg)}
+.tk.bl{left:-8px;bottom:-.75px;transform:rotate(-45deg)}
+.tk.br{right:-8px;bottom:-.75px;transform:rotate(-45deg)}
+.cap{display:flex;justify-content:space-between;gap:8px 16px;flex-wrap:wrap;margin-top:10px}
+.cap .label{max-width:60ch}
+.textlink{background:none;border:0;padding:0;cursor:pointer;font-family:var(--f-util);font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--white);text-decoration:underline;text-underline-offset:4px;text-decoration-color:var(--dim);min-height:24px}
+
+/* trace drawing */
+.trace{position:absolute;inset:0;width:100%;height:100%;opacity:.2;transition:opacity .6s ease;pointer-events:none;z-index:2}
+.trace path,.trace circle{fill:none;stroke:#fff;stroke-width:var(--sw,2);stroke-linecap:square}
+.plate.is-drawing .trace{opacity:1;transition:none}
+.plate.is-drawing .trace path,.plate.is-drawing .trace circle{stroke-dasharray:1;stroke-dashoffset:1;animation:draw .6s var(--ease-draw) forwards;animation-delay:calc(var(--g) * 110ms + var(--k) * 26ms)}
+@keyframes draw{to{stroke-dashoffset:0}}
+.h1-settle{animation:settle .7s var(--ease-draw) both}
+@keyframes settle{from{font-weight:120}to{font-weight:800}}
+
+/* ---------- cover / board ---------- */
+.cover{padding-block:clamp(32px,5vw,72px) 0}
+.cover-head{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--gap);align-items:end}
+.cover-head .eyebrow{grid-column:1/-1}
+.cover-head h1{grid-column:1/-1}
+.cover-head .lead{grid-column:1/span 6}
+.cover-meta{grid-column:8/span 5;display:grid;grid-template-columns:auto 1fr;gap:6px 20px;margin:0;align-self:end}
+.cover-meta dt{font-family:var(--f-util);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);padding-top:3px}
+.cover-meta dd{margin:0;font-size:15px}
+@media (max-width:899px){.cover-head .lead,.cover-meta{grid-column:1/-1}}
+
+.board{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--gap);margin-top:clamp(32px,4vw,56px)}
+.b-hero{grid-column:1/span 8;align-self:start}
+.b-side{grid-column:9/span 4;display:flex;flex-direction:column;gap:var(--gap)}
+.b-cell{grid-column:span 3;display:flex;flex-direction:column}
+.b-panel{background:var(--graphite);padding:clamp(16px,1.6vw,24px);display:flex;flex-direction:column;justify-content:space-between;gap:16px;flex:1;position:relative}
+.b-type .aa{font-family:var(--f-display);font-stretch:62%;font-weight:800;font-size:clamp(80px,9vw,150px);line-height:.8;letter-spacing:-.02em}
+.b-type .aa span{font-weight:200}
+.b-type ul{list-style:none;display:grid;gap:4px}
+.b-type li{display:flex;justify-content:space-between;gap:12px;border-top:1px solid var(--line);padding-top:6px}
+.b-type li b{font-family:var(--f-display);font-stretch:100%;font-weight:600;font-size:14px;text-transform:uppercase;letter-spacing:.02em}
+.logo-block{background:var(--red);aspect-ratio:3/2;display:grid;place-items:center;position:relative}
+.logo-block img{width:73%;height:auto}
+.logo-block .gl{position:absolute;background:rgba(255,255,255,.22);pointer-events:none}
+.gl.h{left:-12px;right:-12px;height:1px}.gl.v{top:-12px;bottom:-12px;width:1px}
+.mini-slabs{display:grid;gap:8px}
+.mini-slabs div{height:44px;display:flex;align-items:center;justify-content:flex-end;padding-right:12px;font-family:var(--f-util);font-size:12px;font-weight:500;letter-spacing:.06em;clip-path:polygon(12px 0,100% 0,100% 100%,0 100%)}
+.mini-slabs div:nth-child(1){margin-left:24px;background:var(--black);color:var(--white);box-shadow:inset 0 0 0 1px var(--line)}
+.mini-slabs div:nth-child(2){margin-left:12px;background:var(--white);color:var(--black)}
+.mini-slabs div:nth-child(3){background:var(--red);color:var(--white)}
+.dim-line{position:relative;height:40px;margin-top:8px}
+.dim-line svg{width:100%;height:100%;overflow:visible}
+.kw{list-style:none;display:flex;flex-wrap:wrap;gap:6px}
+.kw li{font-family:var(--f-util);font-size:12px;letter-spacing:.04em;border:1px solid var(--line);padding:4px 8px}
+@media (max-width:1023px){.b-hero{grid-column:1/-1}.b-side{grid-column:1/-1;flex-direction:row}.b-side>*{flex:1}.b-cell{grid-column:span 6}}
+@media (max-width:599px){.b-side{flex-direction:column}.b-cell{grid-column:1/-1}}
+
+.index{margin-top:clamp(32px,4vw,48px);border-top:1px solid var(--line);padding-top:14px;display:flex;flex-wrap:wrap;gap:8px 20px;align-items:baseline}
+.index a{font-family:var(--f-util);font-size:13px;letter-spacing:.02em;text-decoration:none;color:var(--dim);padding-block:6px}
+.index a:hover,.index a:focus-visible{color:var(--white)}
+.index a b{color:var(--white);font-weight:500;margin-right:6px}
+
+/* ---------- sheets ---------- */
+.sheet{padding-top:clamp(72px,9vw,136px);scroll-margin-top:16px}
+.sheet-head{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:12px var(--gap);border-top:1px solid var(--line);padding-top:16px;margin-bottom:clamp(28px,3.6vw,52px)}
+.sheet-head .label{grid-column:1/span 3;padding-top:6px}
+.sheet-head .sh-main{grid-column:4/span 9;display:grid;gap:18px}
+.sheet-head .sh-main p{color:var(--white)}
+@media (max-width:899px){.sheet-head .label,.sheet-head .sh-main{grid-column:1/-1}}
+.grid12{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--gap)}
+
+/* MB-01 directions */
+.tbl-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%}
+.dir-tbl{min-width:760px}
+.dir-tbl th{text-align:left;font-family:var(--f-util);font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);padding:0 16px 10px 0;border-bottom:1px solid var(--line);vertical-align:bottom}
+.dir-tbl td{padding:16px 16px 16px 0;border-bottom:1px solid var(--line);vertical-align:top}
+.dir-tbl td:first-child{width:22%}
+.dir-tbl .dname{font-family:var(--f-display);font-stretch:62%;font-weight:700;font-size:28px;line-height:1;text-transform:uppercase}
+.dir-tbl .lead-tag{display:inline-block;margin-top:8px;background:var(--red);color:var(--white);font-family:var(--f-util);font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;padding:3px 7px}
+.score{font-family:var(--f-util);font-variant-numeric:tabular-nums;white-space:nowrap;width:120px}
+.score .bar{display:block;height:4px;background:var(--line);margin-top:6px;width:100px}
+.score .bar i{display:block;height:100%;background:var(--white)}
+.dir-tbl tr.is-lead .score .bar i{background:var(--red)}
+@media (max-width:719px){
+  .dir-tbl{min-width:0}
+  .dir-tbl thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  .dir-tbl tr{display:grid;grid-template-columns:1fr 1fr;gap:10px 16px;padding-block:18px;border-bottom:1px solid var(--line)}
+  .dir-tbl td{display:block;padding:0;border:0;width:auto}
+  .dir-tbl td:first-child{width:auto;grid-column:1/-1}
+  .dir-tbl td:nth-child(2),.dir-tbl td:nth-child(5){grid-column:1/-1}
+  .dir-tbl td[data-label]::before{content:attr(data-label);display:block;font-family:var(--f-util);font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);margin-bottom:4px}
+}
+.note-row{margin-top:20px;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--gap)}
+.note-row p{grid-column:4/span 7;color:var(--dim)}
+@media (max-width:899px){.note-row p{grid-column:1/-1}}
+
+/* MB-02 principles */
+.principles{list-style:none;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px var(--gap)}
+.principles li.key{grid-column:span 2}
+.principles li.key h3{font-size:clamp(22px,2.2vw,30px)}
+.principles li.key p{font-size:17px;color:var(--white)}
+.principles li{border-top:1px solid var(--line);padding-top:14px;display:grid;gap:10px;align-content:start}
+.principles li p{color:var(--dim);font-size:15px}
+.principles li.key{border-top-color:var(--red)}
+@media (max-width:1023px){.principles{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:599px){.principles{grid-template-columns:1fr}.principles li.key{grid-column:auto}}
+
+/* MB-03 colour */
+.colour{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:40px var(--gap)}
+.slabs{grid-column:1/span 7;list-style:none;display:grid;gap:10px}
+.slab-c{--h:clamp(96px,10vw,132px);min-height:var(--h);display:flex;justify-content:space-between;align-items:flex-end;gap:16px;padding:16px 20px 16px calc(var(--h) * .268 + 20px);clip-path:polygon(calc(var(--h) * .268) 0,100% 0,100% 100%,0 100%)}
+.slab-c{position:relative}
+.slab-c>*{position:relative}
+.slab-c:nth-child(1){margin-left:calc((var(--h) + 10px) * .268 * 2);background:#3a3a3a}
+.slab-c:nth-child(1)::before{content:"";position:absolute;inset:1px;background:var(--black);clip-path:polygon(calc(var(--h) * .268 - 1px) 0,100% 0,100% 100%,0 100%)}
+.slab-c:nth-child(2){margin-left:calc((var(--h) + 10px) * .268);background:var(--white);color:var(--black)}
+.slab-c:nth-child(3){background:var(--red);color:var(--white)}
+.slab-c b{display:block;font-family:var(--f-display);font-stretch:62%;font-weight:700;font-size:clamp(24px,2.4vw,34px);text-transform:uppercase;line-height:1}
+.slab-c .hex{font-family:var(--f-util);font-size:13px;font-weight:500;letter-spacing:.04em}
+.slab-c .meta{font-family:var(--f-util);font-size:12px;text-align:right;line-height:1.5;max-width:30ch}
+.neutrals{grid-column:8/span 5;display:grid;gap:22px;align-content:start}
+.chips{list-style:none;display:grid;gap:10px}
+.chips li{display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start}
+.chips .sw{width:44px;height:44px;box-shadow:inset 0 0 0 1px #3a3a3a}
+.chips b{font-family:var(--f-display);font-stretch:100%;font-weight:600;font-size:15px;text-transform:uppercase;letter-spacing:.02em}
+.chips p{font-size:14px;color:var(--dim)}
+.ratio-bar{display:flex;height:28px;margin-top:6px}
+.ratio-bar span{display:flex;align-items:center;padding-left:8px;font-family:var(--f-util);font-size:11px;font-weight:500}
+.red-q{grid-column:1/-1;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--gap);border-top:1px solid var(--line);padding-top:24px}
+.red-q .pair{grid-column:1/span 5;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.red-q .pair div{aspect-ratio:3/2;display:flex;flex-direction:column;justify-content:flex-end;padding:12px;color:var(--white);font-family:var(--f-util);font-size:12px;font-weight:500;letter-spacing:.04em}
+.red-q .txt{grid-column:7/span 6;display:grid;gap:12px;align-content:start}
+@media (max-width:1023px){.slabs,.neutrals,.red-q .pair,.red-q .txt{grid-column:1/-1}}
+
+/* MB-04 type */
+.specimens{list-style:none;display:grid}
+.specimens>li{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:12px var(--gap);border-top:1px solid var(--line);padding-block:24px}
+.specimens .sp-meta{grid-column:1/span 3;display:grid;gap:6px;align-content:start}
+.specimens .sp-meta b{font-family:var(--f-display);font-stretch:100%;font-weight:600;font-size:15px;text-transform:uppercase;letter-spacing:.02em}
+.specimens .sp-body{grid-column:4/span 9;min-width:0}
+@media (max-width:899px){.specimens .sp-meta,.specimens .sp-body{grid-column:1/-1}}
+.sp-display{font-family:var(--f-display);font-stretch:62%;font-weight:800;text-transform:uppercase;font-size:clamp(48px,7.4vw,120px);line-height:.88;letter-spacing:-.01em;text-wrap:balance}
+.sp-heading{font-family:var(--f-display);font-stretch:100%;font-weight:600;text-transform:uppercase;font-size:clamp(22px,2.6vw,36px);line-height:1.1;letter-spacing:.01em}
+.sp-body-text{font-size:clamp(17px,1.4vw,19px);max-width:62ch}
+.sp-util{font-family:var(--f-util);font-weight:500;font-size:13px;letter-spacing:.08em;text-transform:uppercase;font-variant-numeric:tabular-nums;display:grid;gap:10px}
+.sp-util .big{font-family:var(--f-util);font-weight:400;font-size:clamp(18px,1.6vw,22px);letter-spacing:0;text-transform:none}
+.sp-util .big i{font-style:normal;color:var(--dim)}
+.sp-ar{direction:rtl;text-align:right;display:grid;gap:10px}
+.sp-ar .d{font-family:"Noto Kufi Arabic",var(--f-ar);font-weight:800;font-size:clamp(34px,4.6vw,64px);line-height:1.3}
+.sp-ar .t{font-family:var(--f-ar);font-size:18px}
+.weights{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:14px;font-family:var(--f-display);font-stretch:62%;text-transform:uppercase;font-size:28px;line-height:1}
+
+/* MB-05 photography */
+.photo-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:40px var(--gap)}
+.compare-wrap{grid-column:1/span 8}
+.photo-rules{grid-column:9/span 4;display:grid;gap:22px;align-content:start}
+@media (max-width:1023px){.compare-wrap,.photo-rules{grid-column:1/-1}}
+.rules{list-style:none;display:grid;gap:12px}
+.rules li{border-top:1px solid var(--line);padding-top:10px;font-size:15px}
+.rules li b{font-weight:600}
+.compare{--x:50%;touch-action:pan-y}
+.compare .before{position:absolute;inset:0;clip-path:polygon(0 0,calc(var(--x) + 8.93%) 0,calc(var(--x) - 8.93%) 100%,0 100%);z-index:1}
+.compare .divider{position:absolute;inset:0;width:100%;height:100%;z-index:2;pointer-events:none;overflow:visible}
+.compare .divider line{stroke:var(--red);stroke-width:1.5;vector-effect:non-scaling-stroke}
+.compare .handle{position:absolute;top:50%;left:var(--x);width:44px;height:44px;transform:translate(-50%,-50%);background:var(--red);z-index:3;pointer-events:none;display:grid;place-items:center}
+.compare .handle svg{width:22px;height:22px}
+.compare input{position:absolute;inset:0;width:100%;height:100%;opacity:0;margin:0;cursor:ew-resize;z-index:4}
+.compare input:focus-visible ~ .handle{outline:2px solid var(--white);outline-offset:2px;box-shadow:0 0 0 6px var(--black)}
+.tag{position:absolute;top:12px;z-index:3;background:var(--black);color:var(--white);font-family:var(--f-util);font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;padding:4px 8px}
+.tag.l{left:12px}.tag.r{right:12px}
+.strip{grid-column:1/-1;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:var(--gap)}
+.strip figure .label{margin-top:8px}
+@media (max-width:899px){.strip{grid-template-columns:repeat(2,minmax(0,1fr))}.strip figure:last-child{display:none}}
+
+/* MB-06 marks */
+.marks{list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--gap)}
+.marks li{display:grid;gap:12px;align-content:start}
+.marks .mk{background:var(--graphite);aspect-ratio:16/10;display:grid;place-items:center;overflow:hidden}
+.marks .mk svg{width:88%;height:auto;overflow:visible}
+.marks p{font-size:15px;color:var(--dim)}
+@media (max-width:899px){.marks{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:540px){.marks{grid-template-columns:1fr}}
+
+/* MB-07 register */
+.register{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--gap);align-items:start}
+.reg-list{grid-column:1/span 8;min-width:0}
+.reg-side{grid-column:9/span 4;position:sticky;top:24px;display:grid;gap:10px}
+.reg-tbl th{text-align:left;font-family:var(--f-util);font-weight:500;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);padding:0 12px 10px 0;border-bottom:1px solid var(--line);white-space:nowrap;vertical-align:bottom}
+.reg-tbl td{padding:12px 12px 12px 0;border-bottom:1px solid var(--line);vertical-align:middle;font-size:14px;transition:background .18s ease-out}
+.reg-tbl td.r,.reg-tbl th.r{text-align:right}
+.reg-tbl tbody tr{cursor:pointer}
+.reg-tbl tbody tr:hover td,.reg-tbl tbody tr.is-active td{background:var(--graphite)}
+.reg-tbl tbody tr.is-active td:first-child{box-shadow:inset 2px 0 0 var(--red)}
+.reg-tbl td:first-child{padding-left:10px}
+.reg-tbl th:first-child{padding-left:10px}
+.row-btn{background:none;border:0;padding:0;text-align:left;cursor:pointer;display:grid;gap:2px;min-height:44px;align-content:center}
+.row-btn .bn{font-family:var(--f-display);font-stretch:62%;font-weight:700;font-size:24px;line-height:1;text-transform:uppercase}
+.row-btn .cl{font-family:var(--f-util);font-size:12px;color:var(--dim)}
+.row-btn .mo{display:none;font-family:var(--f-util);font-size:12px;color:var(--dim)}
+.scope-cells{display:inline-flex;gap:3px;vertical-align:middle}
+.scope-cells i{width:12px;height:12px;box-shadow:inset 0 0 0 1px var(--dim)}
+.scope-cells i.g{background:var(--red);box-shadow:none}
+.reg-preview .layer{position:absolute;inset:0}
+.reg-legend{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center;margin-top:12px}
+.reg-legend span{display:inline-flex;gap:6px;align-items:center}
+.reg-extras{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--gap);margin-top:40px}
+.reg-extras>div{grid-column:span 4;border-top:1px solid var(--line);padding-top:14px;display:grid;gap:10px;align-content:start}
+.reg-extras p{font-size:15px;color:var(--dim)}
+.same-scale svg{width:100%;height:auto;margin-top:6px}
+@media (max-width:1023px){
+  .reg-list,.reg-side{grid-column:1/-1}
+  .reg-side{position:relative;top:0;order:-1}
+  .reg-extras>div{grid-column:1/-1}
+}
+@media (max-width:719px){
+  .reg-tbl .hide-s{display:none}
+  .row-btn .mo{display:block}
+}
+
+/* MB-08 project sheet */
+.psheet{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:40px var(--gap);align-items:start}
+.kn-fig{grid-column:1/span 5}
+.kn-side{grid-column:7/span 6;display:grid;gap:32px}
+@media (max-width:1023px){.kn-fig{grid-column:1/span 7}.kn-side{grid-column:8/span 5}}
+@media (max-width:799px){.kn-fig,.kn-side{grid-column:1/-1}}
+.kn-lines{position:absolute;inset:0;width:100%;height:100%;z-index:2;pointer-events:none}
+.kn-lines line{stroke:var(--red);stroke-width:1.5;vector-effect:non-scaling-stroke}
+.kn-term{position:absolute;width:6px;height:6px;background:var(--red);transform:translate(-50%,-50%);z-index:2}
+.kn-tag{position:absolute;transform:translate(-50%,-50%);width:44px;height:44px;border:0;padding:0;background:none;cursor:pointer;z-index:3;display:grid;place-items:center}
+.kn-tag span{width:30px;height:26px;background:var(--red);color:var(--white);clip-path:polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%);font-family:var(--f-util);font-weight:500;font-size:12px;display:grid;place-items:center;transition:background .18s ease-out,color .18s ease-out}
+.kn-tag.is-on span,.kn-tag:hover span{background:var(--white);color:var(--black)}
+.kn-tag:focus-visible{outline:2px solid var(--white);outline-offset:-4px}
+.tb{display:grid;grid-template-columns:auto 1fr;border:1px solid var(--line);margin:0}
+.tb dt,.tb dd{margin:0;padding:10px 14px;border-bottom:1px solid var(--line)}
+.tb dt{font-family:var(--f-util);font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);border-right:1px solid var(--line)}
+.tb dd{font-size:15px}
+.tb dt:nth-last-of-type(1),.tb dd:last-child{border-bottom:0}
+.tb .brandname{font-family:var(--f-display);font-stretch:62%;font-weight:700;font-size:30px;line-height:1;text-transform:uppercase}
+.roles{list-style:none;display:grid;gap:6px}
+.roles li{display:flex;justify-content:space-between;gap:12px;font-size:14px}
+.roles li span:last-child{font-family:var(--f-util);font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+.roles .by-g{color:var(--white)}
+.roles .by-b{color:var(--dim)}
+.legend{list-style:none;display:grid;gap:2px;counter-reset:kn}
+.legend li{display:grid;grid-template-columns:36px 1fr;gap:12px;padding:10px 8px;border-top:1px solid var(--line);transition:background .18s ease-out}
+.legend li.is-on{background:var(--graphite)}
+.legend .n{font-family:var(--f-util);font-weight:500;font-size:12px;color:var(--white);background:var(--red);clip-path:polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%);width:30px;height:26px;display:grid;place-items:center}
+.legend b{display:block;font-family:var(--f-util);font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--dim)}
+.bcr{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--gap)}
+.bcr div{border-top:1px solid var(--line);padding-top:10px;display:grid;gap:6px;align-content:start}
+.bcr p{font-size:14px;color:var(--dim)}
+@media (max-width:599px){.bcr{grid-template-columns:1fr}}
+.sheet-order{list-style:none;counter-reset:so;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0 var(--gap);margin-top:48px;border-top:1px solid var(--line)}
+.sheet-order li{counter-increment:so;padding:12px 0;border-bottom:1px solid var(--line);font-size:15px;display:flex;gap:10px}
+.sheet-order li::before{content:counter(so,decimal-leading-zero);font-family:var(--f-util);font-size:12px;color:var(--dim);padding-top:3px;font-variant-numeric:tabular-nums}
+@media (max-width:899px){.sheet-order{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* MB-09 scope stack */
+.stack-wrap{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:32px var(--gap)}
+.amp{grid-column:1/-1;font-family:var(--f-display);font-stretch:62%;font-weight:800;text-transform:uppercase;font-size:clamp(40px,6.6vw,108px);line-height:.9;letter-spacing:-.01em}
+.stack-ctl{grid-column:1/-1;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.stack{grid-column:1/span 8;list-style:none;display:grid;gap:8px}
+.stack li{--h:52px;--o:calc((var(--h) + 8px) * .268);position:relative;height:var(--h);background:var(--graphite);clip-path:polygon(calc(var(--h) * .268) 0,100% 0,100% 100%,0 100%);display:flex;align-items:center;justify-content:space-between;gap:12px;padding:0 18px 0 calc(var(--h) * .268 + 18px)}
+.stack li:nth-child(1){margin-left:calc(var(--o) * 4)}
+.stack li:nth-child(2){margin-left:calc(var(--o) * 3)}
+.stack li:nth-child(3){margin-left:calc(var(--o) * 2)}
+.stack li:nth-child(4){margin-left:calc(var(--o) * 1)}
+.stack li::before{content:"";position:absolute;inset:0;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease-fill);transition-delay:calc(var(--i) * 120ms)}
+.stack li.is-filled::before{transform:scaleX(1)}
+.stack li>*{position:relative}
+.stack .sl{font-family:var(--f-display);font-stretch:100%;font-weight:600;font-size:clamp(14px,1.4vw,18px);text-transform:uppercase;letter-spacing:.02em}
+.stack .st{font-family:var(--f-util);font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);white-space:nowrap}
+.stack li.is-filled .st{color:var(--white)}
+.stack-note{grid-column:9/span 4;display:grid;gap:12px;align-content:start}
+.stack-note p{font-size:15px;color:var(--dim)}
+@media (max-width:1023px){.stack,.stack-note{grid-column:1/-1}}
+@media (max-width:599px){.stack li{--h:52px}.stack li:nth-child(n){margin-left:0}.stack .st{font-size:10px}}
+.process{list-style:none;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:var(--gap);margin-top:56px;position:relative;padding-top:28px}
+.process::before{content:"";position:absolute;left:0;right:0;top:8px;height:1px;background:var(--white);opacity:.6}
+.process li{position:relative;display:grid;gap:8px;align-content:start}
+.process li::before{content:"";position:absolute;left:-4px;top:-26px;width:16px;height:1.5px;background:var(--white);transform:rotate(-45deg)}
+.process .pn{font-family:var(--f-util);font-size:12px;color:var(--dim);font-variant-numeric:tabular-nums}
+.process p{font-size:14px;color:var(--dim)}
+@media (max-width:899px){.process{grid-template-columns:1fr;padding-top:0;padding-left:28px;gap:24px}.process::before{left:8px;right:auto;top:0;bottom:0;width:1px;height:auto}.process li::before{left:-28px;top:10px}}
+
+/* MB-10 3D */
+.a900{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:32px var(--gap)}
+.a900-stage{grid-column:1/-1}
+.stage{position:relative;aspect-ratio:16/9;background:var(--black);box-shadow:inset 0 0 0 1px var(--line);max-width:100%}
+@media (max-width:719px){.stage{aspect-ratio:4/5}}
+.stage canvas{position:absolute;inset:0;width:100%!important;height:100%!important;display:block;cursor:grab}
+.is-dragging .stage canvas{cursor:grabbing}
+.stage .poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.stage .ph-tag{position:absolute;left:12px;top:12px;z-index:3;font-family:var(--f-util);font-size:11px;font-weight:500;letter-spacing:.08em;color:var(--white);background:rgba(11,11,11,.8);padding:4px 8px;text-transform:uppercase}
+.stage .load{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:3;white-space:nowrap}
+.stage .fallback{position:absolute;left:12px;right:12px;bottom:12px;z-index:3;background:var(--black);padding:10px 12px;font-size:14px}
+.a900-ctl{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;align-items:center}
+.steps{display:flex;flex-wrap:wrap;gap:6px;list-style:none}
+.steps button{background:var(--graphite);border:1px solid var(--line);min-height:44px;padding:0 12px;cursor:pointer;font-family:var(--f-util);font-size:12px;font-weight:500;letter-spacing:.04em;text-transform:uppercase;color:var(--dim);display:flex;gap:8px;align-items:center}
+.steps button b{color:var(--white);font-weight:500}
+.steps button.is-done{color:var(--white)}
+.steps button[aria-pressed="true"]{background:var(--white);color:var(--black);border-color:var(--white)}
+.steps button[aria-pressed="true"] b{color:var(--red)}
+.a900-caption{margin-top:14px;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--gap);min-height:3.2em}
+.a900-caption h3{grid-column:1/span 3}
+.a900-caption p{grid-column:4/span 9}
+@media (max-width:719px){.a900-caption h3,.a900-caption p{grid-column:1/-1}}
+.a900-text{grid-column:1/-1;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:32px var(--gap)}
+.a900-text>div{grid-column:span 4;display:grid;gap:12px;align-content:start;border-top:1px solid var(--line);padding-top:14px}
+.a900-text ul{list-style:none;display:grid;gap:8px}
+.a900-text li{font-size:15px;color:var(--dim);padding-left:16px;position:relative}
+.a900-text li::before{content:"";position:absolute;left:0;top:.72em;width:8px;height:1px;background:var(--white)}
+@media (max-width:1023px){.a900-text>div{grid-column:1/-1}}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 20px;border:1px solid var(--white);background:transparent;color:var(--white);font-family:var(--f-display);font-stretch:100%;font-weight:600;font-size:14px;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;cursor:pointer;position:relative;transition:background .18s ease-out,color .18s ease-out}
+.btn.primary{background:var(--red);border-color:var(--red)}
+.btn.primary:focus-visible{outline:2px solid var(--white);outline-offset:0;box-shadow:0 0 0 4px var(--black)}
+.btn .c{position:absolute;width:12px;height:1.5px;background:var(--white);transform:rotate(-45deg);opacity:0;transition:opacity .18s ease-out}
+.btn .c.a{left:-6px;top:-1px}.btn .c.b{right:-6px;bottom:-1px}
+.btn:hover .c,.btn:focus-visible .c{opacity:1}
+.btn:not(.primary):hover{background:var(--white);color:var(--black)}
+.dlink{position:relative;text-decoration:none;padding-bottom:6px;font-weight:500}
+.dlink::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--white);transform:scaleX(0);transform-origin:left;transition:transform .18s ease-out}
+.dlink:hover::after,.dlink:focus-visible::after,.dlink.demo::after{transform:scaleX(1)}
+.dlink .e{position:absolute;bottom:-4px;width:1.5px;height:9px;background:var(--white);transform:rotate(45deg);opacity:0;transition:opacity .18s ease-out}
+.dlink .e.a{left:0}.dlink .e.b{right:0}
+.dlink:hover .e,.dlink:focus-visible .e,.dlink.demo .e{opacity:1}
+
+/* MB-11 motion */
+.motion{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:40px var(--gap)}
+.curves{grid-column:1/span 7;list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--gap)}
+.curves li{display:grid;grid-template-columns:72px 1fr;gap:16px;align-items:start;border-top:1px solid var(--line);padding-top:14px}
+.curves svg{width:72px;height:72px;overflow:visible}
+.curves b{display:block;font-family:var(--f-display);font-stretch:100%;font-weight:600;font-size:15px;text-transform:uppercase;letter-spacing:.02em}
+.curves p{font-size:14px;color:var(--dim)}
+.motion-rules{grid-column:9/span 4}
+@media (max-width:1023px){.curves,.motion-rules{grid-column:1/-1}}
+@media (max-width:599px){.curves{grid-template-columns:1fr}}
+
+/* MB-12 interface */
+.ui-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--gap)}
+.ui-cell{grid-column:span 4;background:var(--graphite);padding:24px;display:grid;gap:18px;align-content:space-between;min-height:220px}
+.ui-cell .demo{display:flex;flex-wrap:wrap;gap:16px;align-items:center;min-height:64px}
+.ui-cell p{font-size:14px;color:var(--dim)}
+.ui-cell.wide{grid-column:span 8}
+@media (max-width:1023px){.ui-cell{grid-column:span 6}.ui-cell.wide{grid-column:1/-1}}
+@media (max-width:599px){.ui-cell{grid-column:1/-1;min-height:0}}
+.focus-demo{outline:2px solid var(--red);outline-offset:3px}
+.title-block-demo{width:288px;max-width:100%;height:56px;background:var(--black);box-shadow:inset 0 0 0 1px var(--line);display:grid;grid-template-columns:1fr auto;align-items:center;padding:0 12px;gap:8px;position:relative}
+.light-sheet{grid-column:1/-1;background:var(--white);color:var(--black);padding:clamp(20px,3vw,40px);display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px var(--gap)}
+.light-sheet .ls-head{grid-column:1/span 4;display:grid;gap:14px;align-content:start}
+.light-sheet .ls-head .label{color:var(--sheet-grey)}
+.light-sheet h3.big{font-family:var(--f-display);font-stretch:62%;font-weight:800;font-size:clamp(40px,4.4vw,64px);line-height:.9}
+.light-sheet p{color:var(--sheet-grey);font-size:15px}
+.light-sheet form{grid-column:5/span 8;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px var(--gap)}
+.light-sheet .f{display:grid;gap:6px}
+.light-sheet .f.full{grid-column:1/-1}
+.light-sheet label{font-family:var(--f-util);font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--sheet-grey)}
+.light-sheet input,.light-sheet select{font:inherit;font-size:16px;color:var(--black);background:var(--white);border:0;border-bottom:1px solid var(--black);border-radius:0;padding:10px 0;min-height:44px;width:100%}
+.light-sheet input:focus-visible,.light-sheet select:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+.light-sheet .form-end{grid-column:1/-1;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.light-sheet .btn.primary{color:var(--white)}
+.light-sheet .btn.primary:focus-visible{outline:2px solid var(--black);outline-offset:2px;box-shadow:none}
+.light-sheet .ok{font-size:14px;color:var(--black)}
+@media (max-width:899px){.light-sheet .ls-head,.light-sheet form{grid-column:1/-1}}
+@media (max-width:540px){.light-sheet form{grid-template-columns:1fr}}
+
+/* MB-13 voice */
+.voice{list-style:none;display:grid}
+.voice li{border-top:1px solid var(--line);padding-block:18px;font-family:var(--f-display);font-stretch:62%;font-weight:700;text-transform:uppercase;font-size:clamp(28px,3.6vw,52px);line-height:.98;text-wrap:balance}
+.voice li:last-child{border-bottom:1px solid var(--line)}
+.voice-rules{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--gap);margin-top:32px}
+.voice-rules div{display:grid;gap:8px;align-content:start}
+.voice-rules p{font-size:14px;color:var(--dim)}
+@media (max-width:899px){.voice-rules{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:540px){.voice-rules{grid-template-columns:1fr}}
+
+/* MB-14 refs / MB-15 avoid / MB-16 questions */
+.refs{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:40px var(--gap)}
+.refs>div{grid-column:span 6;display:grid;gap:14px;align-content:start}
+@media (max-width:899px){.refs>div{grid-column:1/-1}}
+.ref-list{list-style:none;display:grid}
+.ref-list li{border-top:1px solid var(--line);padding-block:12px;display:grid;gap:4px}
+.ref-list a{font-weight:600;text-decoration:none}
+.ref-list a:hover,.ref-list a:focus-visible{text-decoration:underline;text-underline-offset:4px}
+.ref-list .u{font-family:var(--f-util);font-size:12px;color:var(--dim);word-break:break-all}
+.ref-list p{font-size:14px;color:var(--dim)}
+.avoid{list-style:none;columns:2;column-gap:var(--gap)}
+.avoid li{break-inside:avoid;border-top:1px solid var(--line);padding-block:10px 12px;font-size:15px;display:grid;grid-template-columns:18px 1fr;gap:8px}
+.avoid li::before{content:"";width:12px;height:1.5px;background:var(--red);transform:rotate(-45deg);margin-top:.75em}
+@media (max-width:799px){.avoid{columns:1}}
+.qs{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:40px var(--gap)}
+.qgroup{grid-column:span 6;display:grid;gap:10px;align-content:start}
+@media (max-width:899px){.qgroup{grid-column:1/-1}}
+.qlist{list-style:none;display:grid}
+.qlist li{border-top:1px solid var(--line);padding-block:12px;display:grid;grid-template-columns:44px 1fr;gap:8px;font-size:15px}
+.qlist li .qn{font-family:var(--f-util);font-weight:500;font-size:13px;color:var(--white);font-variant-numeric:tabular-nums;padding-top:1px}
+.next{margin-top:clamp(56px,7vw,96px);display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px var(--gap);border-top:1px solid var(--red);padding-top:24px}
+.next h2{grid-column:1/span 7}
+.next .nx{grid-column:8/span 5;display:grid;gap:14px;align-content:start}
+@media (max-width:899px){.next h2,.next .nx{grid-column:1/-1}}
+
+footer{margin-top:clamp(72px,9vw,120px);padding-block:0 96px}
+.foot{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:28px}
+
+/* title block */
+.titleblock{position:fixed;right:24px;bottom:calc(24px + env(safe-area-inset-bottom,0px));width:288px;height:56px;background:var(--graphite);z-index:20;display:grid;grid-template-columns:1fr auto;align-items:center;gap:8px;padding:0 14px;box-shadow:inset 0 0 0 1px var(--line)}
+.titleblock .t1{font-family:var(--f-util);font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.titleblock .t2{font-family:var(--f-util);font-size:11px;color:var(--dim);letter-spacing:.04em;white-space:nowrap}
+.titleblock .wm{width:42px;height:auto;opacity:.9}
+.titleblock{transition:opacity .18s ease-out,visibility .18s}
+.titleblock.is-off{opacity:0;visibility:hidden}
+@media (max-width:1023px),(max-height:520px){.titleblock{display:none}}
+
+/* as-built / reduced motion */
+.as-built .plate.is-drawing .trace{opacity:.2}
+.as-built .plate.is-drawing .trace path,.as-built .plate.is-drawing .trace circle{animation:none;stroke-dashoffset:0}
+.as-built .h1-settle{animation:none}
+.as-built .stack li::before{transition:none}
+@media (prefers-reduced-motion:reduce){
+  .plate.is-drawing .trace path,.plate.is-drawing .trace circle{animation:none;stroke-dashoffset:0}
+  .h1-settle{animation:none}
+  .stack li::before{transition:none}
+  *{scroll-behavior:auto}
+}
+</style>
+
+<main>
+<header class="wrap"><div class="top">
+  <a class="brand" href="#top" aria-label="GIMA, Elbanna Design Group">
+    <img src="assets/logo-red-block.png" alt="GIMA" width="72" height="48">
+    <span class="lockup"><b>ELBANNA DESIGN GROUP</b><span>SHOP DESIGN | CONCEPT DESIGN | CONSTRUCTION</span></span>
+  </a>
+  <div class="top-right">
+    <span class="label">Website moodboard · Draft 1 · 27 Sep 2026</span>
+    <div class="anim-set">
+      <span class="label" id="anim-label">Animations</span>
+      <div class="seg" role="group" aria-labelledby="anim-label">
+        <button type="button" id="mode-drawing" data-mode="drawing" aria-pressed="true">Drawing</button>
+        <button type="button" id="mode-built" data-mode="built" aria-pressed="false">As-built</button>
+      </div>
+    </div>
+  </div>
+</div></header>
+
+<!-- MB-00 COVER / BOARD -->
+<section class="wrap cover" id="top" data-sheet="MB-00 · The board">
+  <div class="cover-head">
+    <p class="label lead-red eyebrow">MB-00 · Moodboard for the GIMA website · Recommended direction</p>
+    <h1 class="display" id="h1">Drawn,<br>then built.</h1>
+    <p class="lead">The website reads like GIMA's own drawing set. Each project is shown as design becoming build: a hairline drawing traces over the finished store, then settles back so the work stays in front. After that, the facts are filed plainly.</p>
+    <dl class="cover-meta">
+      <dt>For</dt><dd>GIMA · Elbanna Design Group</dd>
+      <dt>Job</dt><dd>The company's CV: turnkey retail fit-out, shown with evidence</dd>
+      <dt>Status</dt><dd>For discussion. Nothing here is final.</dd>
+      <dt>Next</dt><dd>Sitemap and wireframes, once we agree the direction</dd>
+    </dl>
+  </div>
+
+  <div class="board">
+    <figure class="b-hero">
+      <div class="plate ticked" id="hero-plate" data-ticks>
+        <img src="assets/graded/leather-goods-lounge-true.jpg" alt="Leather goods store: lit wall shelving with bags and shoes, dark timber, two cream bouclé lounge chairs on a brown rug" fetchpriority="high">
+        <svg class="trace" viewBox="0 0 1600 1063" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <g style="--g:0">
+            <path pathLength="1" d="M0 100 L415 112"/><path pathLength="1" d="M578 150 L856 168"/><path pathLength="1" d="M862 165 L864 570"/>
+            <path pathLength="1" d="M1395 40 L1395 700"/><path pathLength="1" d="M840 128 L1395 38"/><path pathLength="1" d="M850 146 L1395 68"/>
+            <path pathLength="1" d="M0 845 L380 792"/>
+          </g>
+          <g style="--g:1">
+            <path pathLength="1" d="M415 112 L415 648"/><path pathLength="1" d="M578 125 L578 622"/><path pathLength="1" d="M415 112 Q497 98 578 125"/>
+          </g>
+          <g style="--g:2">
+            <path pathLength="1" d="M0 245 L398 257"/><path pathLength="1" d="M0 383 L400 380"/><path pathLength="1" d="M0 520 L402 503"/>
+            <path pathLength="1" d="M405 105 L408 640"/><path pathLength="1" d="M583 258 L848 268"/><path pathLength="1" d="M586 372 L848 374"/>
+            <path pathLength="1" d="M588 482 L850 470"/><path pathLength="1" d="M910 272 L1392 212"/><path pathLength="1" d="M912 373 L1390 358"/>
+            <path pathLength="1" d="M915 470 L1388 484"/>
+          </g>
+          <g style="--g:3">
+            <path pathLength="1" d="M0 655 L430 620"/><path pathLength="1" d="M596 590 L876 566"/><path pathLength="1" d="M880 566 L1382 628"/>
+            <path pathLength="1" d="M1380 628 L1378 802"/><path pathLength="1" d="M1050 760 L1378 802"/>
+            <path pathLength="1" d="M62 858 L380 800"/><path pathLength="1" d="M62 858 L215 1063"/><path pathLength="1" d="M1190 818 L1478 884"/><path pathLength="1" d="M1478 884 L1228 1063"/>
+          </g>
+          <g style="--g:4">
+            <circle pathLength="1" cx="293" cy="86" r="9"/><circle pathLength="1" cx="353" cy="90" r="9"/><circle pathLength="1" cx="540" cy="110" r="8"/>
+            <circle pathLength="1" cx="697" cy="128" r="8"/><circle pathLength="1" cx="740" cy="134" r="8"/>
+          </g>
+        </svg>
+      </div>
+      <figcaption class="cap">
+        <span class="label">Pen, then fill: the hairline drawing plays once over a store that is already visible, then settles to 20%. Stand-in photo from the archive, colour-corrected. Brand [TO CONFIRM].</span>
+        <button type="button" class="textlink" id="replay-hero">Replay drawing</button>
+      </figcaption>
+    </figure>
+
+    <div class="b-side">
+      <div class="logo-block ticked" data-ticks>
+        <span class="gl h" style="top:20.6%"></span><span class="gl h" style="top:79.1%"></span>
+        <span class="gl v" style="left:13.5%"></span><span class="gl v" style="left:86.1%"></span>
+        <img src="assets/logo-wordmark-white.png" alt="GIMA wordmark" width="382" height="205" style="width:72.6%">
+      </div>
+      <div class="b-panel b-type">
+        <div class="aa" aria-hidden="true">Aa<span>Aa</span></div>
+        <ul>
+          <li><b>Archivo, condensed</b><span class="label">Display</span></li>
+          <li><b>Hanken Grotesk</b><span class="label">Reading</span></li>
+          <li><b>IBM Plex Sans</b><span class="label">Figures, labels</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <figure class="b-cell">
+      <div class="plate r11"><img src="assets/graded/accessories-display-true.jpg" alt="Close view of a stepped white display with cufflinks, ties, wallets and belts" loading="lazy" style="object-position:40% 50%"></div>
+      <figcaption class="label" style="margin-top:8px">Detail macros stay in colour: this is where finish is judged</figcaption>
+    </figure>
+    <figure class="b-cell">
+      <div class="plate r11"><img src="assets/graded/menswear-floor-mono.jpg" alt="Black and white view of a large menswear floor with gondolas and a patterned wall" loading="lazy"></div>
+      <figcaption class="label" style="margin-top:8px">Black and white only for backgrounds and dimmed entries</figcaption>
+    </figure>
+    <div class="b-cell">
+      <div class="b-panel" style="aspect-ratio:1/1">
+        <span class="label">Colour · rule of one</span>
+        <div class="mini-slabs" aria-label="Brand colours: Legacy Black #0B0B0B, White #FFFFFF, Sunset Red #D72A27">
+          <div>#0B0B0B</div><div>#FFFFFF</div><div>#D72A27</div>
+        </div>
+      </div>
+    </div>
+    <div class="b-cell">
+      <div class="b-panel" style="aspect-ratio:1/1">
+        <span class="label">Documented range</span>
+        <div>
+          <div class="dim-line" aria-hidden="true">
+            <svg viewBox="0 0 300 40" preserveAspectRatio="none">
+              <line x1="0" y1="20" x2="300" y2="20" stroke="#fff" stroke-width="1" vector-effect="non-scaling-stroke"/>
+              <line x1="-6" y1="26" x2="6" y2="14" stroke="#fff" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
+              <line x1="294" y1="26" x2="306" y2="14" stroke="#fff" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
+              <line x1="0" y1="8" x2="0" y2="32" stroke="#fff" stroke-width="1" vector-effect="non-scaling-stroke"/>
+              <line x1="300" y1="8" x2="300" y2="32" stroke="#fff" stroke-width="1" vector-effect="non-scaling-stroke"/>
+            </svg>
+          </div>
+          <p class="num" style="display:flex;justify-content:space-between;font-size:15px"><span>11 m²</span><span>3,000+ m²</span></p>
+        </div>
+        <ul class="kw" aria-label="Mood keywords">
+          <li>drawn, then built</li><li>hairline precision</li><li>as-built evidence</li><li>rule of one</li><li>filed, not claimed</li><li>shell to opening</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <nav class="index" aria-label="Sheets in this moodboard">
+    <span class="label">Sheets</span>
+    <a href="#mb-01"><b>01</b>Direction</a><a href="#mb-02"><b>02</b>Principles</a><a href="#mb-03"><b>03</b>Colour</a>
+    <a href="#mb-04"><b>04</b>Type</a><a href="#mb-05"><b>05</b>Photography</a><a href="#mb-06"><b>06</b>Drawing marks</a>
+    <a href="#mb-07"><b>07</b>Portfolio index</a><a href="#mb-08"><b>08</b>Project sheet</a><a href="#mb-09"><b>09</b>Turnkey scope</a>
+    <a href="#mb-10"><b>10</b>3D assembly</a><a href="#mb-11"><b>11</b>Motion</a><a href="#mb-12"><b>12</b>Interface</a>
+    <a href="#mb-13"><b>13</b>Voice</a><a href="#mb-14"><b>14</b>References</a><a href="#mb-15"><b>15</b>What we avoid</a>
+    <a href="#mb-16"><b>16</b>Questions</a>
+  </nav>
+</section>
+
+<!-- MB-01 DIRECTION -->
+<section class="wrap sheet" id="mb-01" data-sheet="MB-01 · Direction">
+  <div class="sheet-head">
+    <p class="label lead-red">MB-01 · Direction</p>
+    <div class="sh-main">
+      <h2>Four directions, one recommendation</h2>
+      <p>We developed four directions and had each one reviewed twice: once as a head of store development choosing a fit-out contractor would read it, and once for craft, brand fit, speed and accessibility. Scores are out of 50 (five criteria, ten points each). The recommended direction keeps the best ideas from the other three.</p>
+    </div>
+  </div>
+  <div class="tbl-wrap">
+    <table class="dir-tbl">
+      <thead><tr><th scope="col">Direction</th><th scope="col">The idea</th><th scope="col">Buyer's review</th><th scope="col">Craft review</th><th scope="col">What we kept from it</th></tr></thead>
+      <tbody>
+        <tr class="is-lead">
+          <td><span class="dname">Drawn, then built</span><br><span class="lead-tag">Recommended</span></td>
+          <td>The site as GIMA's drawing set. Each flagship is shown once as design becoming build, then every claim is filed as a fact.</td>
+          <td class="score" data-label="Buyer's review">38 / 50<span class="bar"><i style="width:76%"></i></span></td>
+          <td class="score" data-label="Craft review">39 / 50<span class="bar"><i style="width:78%"></i></span></td>
+          <td data-label="What we kept">The lead story: traced drawings, project sheets, keynotes, the 3D assembly.</td>
+        </tr>
+        <tr>
+          <td><span class="dname">The red box</span></td>
+          <td>The 3:2 red logo block becomes the only frame on the work. It opens, scales and cuts to frame every project.</td>
+          <td class="score" data-label="Buyer's review">38 / 50<span class="bar"><i style="width:76%"></i></span></td>
+          <td class="score" data-label="Craft review">38 / 50<span class="bar"><i style="width:76%"></i></span></td>
+          <td data-label="What we kept">The rule of one, the 3:2 module, the scope slabs. Its cursor keyhole was dropped: it has no touch equivalent.</td>
+        </tr>
+        <tr>
+          <td><span class="dname">The ledger</span></td>
+          <td>Forty-five years entered line by line, as a sortable public record.</td>
+          <td class="score" data-label="Buyer's review">32 / 50<span class="bar"><i style="width:64%"></i></span></td>
+          <td class="score" data-label="Craft review">33 / 50<span class="bar"><i style="width:66%"></i></span></td>
+          <td data-label="What we kept">Group by brand, the empty-data rule, the printable record. On its own it reads like a spreadsheet.</td>
+        </tr>
+        <tr>
+          <td><span class="dname">Lights on</span></td>
+          <td>A mall after hours. The visitor switches each shopfront on, ending with the shutter going up on opening day.</td>
+          <td class="score" data-label="Buyer's review">31 / 50<span class="bar"><i style="width:62%"></i></span></td>
+          <td class="score" data-label="Craft review">31 / 50<span class="bar"><i style="width:62%"></i></span></td>
+          <td data-label="What we kept">"Tell us your opening date" as the enquiry, and the shell-to-opening comparison. It keeps the work too dark.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note-row"><p>If one of the other directions speaks to you more, say so. Each is fully written up and we can switch before wireframes.</p></div>
+</section>
+
+<!-- MB-02 PRINCIPLES -->
+<section class="wrap sheet" id="mb-02" data-sheet="MB-02 · Principles">
+  <div class="sheet-head">
+    <p class="label lead-red">MB-02 · Principles</p>
+    <div class="sh-main">
+      <h2>Seven rules every page is checked against</h2>
+      <p>The brand line asks for "a timeless visual language that does not chase trends. Confident without noise. Measured, exact and built to last." These rules turn that into decisions.</p>
+    </div>
+  </div>
+  <ul class="principles">
+    <li class="key"><h3>The store before the story</h3><p>A finished store in true colour, the one-line offer, brand names and a "Start a project" button are visible within a second, without scrolling. Drawings play over the work and never in front of it.</p></li>
+    <li><h3>Show it once, then file it</h3><p>Design becoming build is shown once per project, on its cover and its preview. After that, every claim sits in a labelled field: client, mall, m², year, scope.</p></li>
+    <li><h3>Rule of one</h3><p>At most one strong red element and one drawing device per screen, the logo excepted. Red marks a decision or a delivered scope, nothing else.</p></li>
+    <li><h3>Say what we didn't do</h3><p>Each project lists who did what: "Concept: brand's global design", "Signage: by others". A contractor who is honest about scope is believed about the rest.</p></li>
+    <li><h3>Empty is hidden, never faked</h3><p>No placeholder, dash or estimate ships. A field appears only when its data is verified. Twelve true projects beat forty half-empty rows.</p></li>
+    <li><h3>Plain words, precise marks</h3><p>Navigation and headings use plain words: Work, Services, Process, About, Contact. The drafting language lives in the small marks. Numbers never count up.</p></li>
+    <li><h3>Fast on a mid-range phone</h3><p>Most buyers will first open the link on an Android phone. The largest image loads in under 2.5 seconds on 4G. Nothing hijacks scrolling. 3D loads only when asked for.</p></li>
+  </ul>
+</section>
+
+<!-- MB-03 COLOUR -->
+<section class="wrap sheet" id="mb-03" data-sheet="MB-03 · Colour">
+  <div class="sheet-head">
+    <p class="label lead-red">MB-03 · Colour</p>
+    <div class="sh-main">
+      <h2>Black ground, white work, one red</h2>
+      <p>The three brand colours stay exactly as the guideline sets them. We add four greys for panels, hairlines and small text, all checked for contrast. The slabs below use the guideline's own stacked-swatch shape.</p>
+    </div>
+  </div>
+  <div class="colour">
+    <ul class="slabs">
+      <li class="slab-c"><div><b>Legacy Black</b><span class="hex">#0B0B0B</span></div><span class="meta">Ground for about 80% of surfaces. White on it 19.7:1.</span></li>
+      <li class="slab-c"><div><b>White</b><span class="hex">#FFFFFF</span></div><span class="meta">Text, drawings, light sheets such as the enquiry form. About 15%.</span></li>
+      <li class="slab-c"><div><b>Sunset Red</b><span class="hex">#D72A27</span></div><span class="meta">Logo, main button, keynotes, delivered scope, focus ring. 5% at most. White on it 4.9:1.</span></li>
+    </ul>
+    <div class="neutrals">
+      <span class="label">Supporting neutrals</span>
+      <ul class="chips">
+        <li><span class="sw" style="background:#161616"></span><div><b>Graphite · #161616</b><p>Raised panels: title block, row hover, the 3D stage, form fields on black.</p></div></li>
+        <li><span class="sw" style="background:#2B2B2B"></span><div><b>Construction line · #2B2B2B</b><p>1px hairlines and section rules. Never used for text.</p></div></li>
+        <li><span class="sw" style="background:#9A9A9A"></span><div><b>Dimension grey · #9A9A9A</b><p>Labels, units and captions on black. 7.0:1, passes AA at 12px.</p></div></li>
+        <li><span class="sw" style="background:#5C5C5C"></span><div><b>Sheet grey · #5C5C5C</b><p>Labels and hints on white sheets. 6.7:1.</p></div></li>
+      </ul>
+      <div>
+        <span class="label">Share of any screen</span>
+        <div class="ratio-bar" role="img" aria-label="About 80% black, 15% white, 5% red">
+          <span style="width:80%;background:#0B0B0B;box-shadow:inset 0 0 0 1px #3a3a3a">80%</span>
+          <span style="width:15%;background:#fff;color:#0B0B0B">15%</span>
+          <span style="width:5%;background:#D72A27;padding-left:0"></span>
+        </div>
+      </div>
+    </div>
+    <div class="red-q">
+      <div class="pair">
+        <div style="background:#C63C32">#C63C32<br>Stated in the guideline</div>
+        <div style="background:#D72A27">#D72A27<br>Rendered in the logo files</div>
+      </div>
+      <div class="txt">
+        <h3>Which red is GIMA red?</h3>
+        <p>The guideline states Sunset Red as #C63C32, but the logo artwork and every sample in the guideline render as #D72A27. We use #D72A27 so the website matches the logo, signage and print clients already see. Please confirm with your sign-maker and send the Pantone reference. If #C63C32 is correct, we change one value and every rule still holds.</p>
+        <p class="body-dim">Red on black is 4.0:1, so on black it is used for lines, marks and display type of 24px and up, never for small text.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MB-04 TYPE -->
+<section class="wrap sheet" id="mb-04" data-sheet="MB-04 · Type">
+  <div class="sheet-head">
+    <p class="label lead-red">MB-04 · Type</p>
+    <div class="sh-main">
+      <h2>Tall and heavy for names, quiet for reading</h2>
+      <p>The guideline's fonts are Beirut and Devanagari Sangam MN. Both come bundled with macOS and are licensed for Mac use only, so they cannot be served on a website. These open-licensed faces stand in for them. If an exact match matters, we can ask Diwan, Beirut's maker, for a web licence quote.</p>
+    </div>
+  </div>
+  <ul class="specimens">
+    <li>
+      <div class="sp-meta"><b>Display</b><span class="label">Archivo · width 62 · weight 800</span><span class="label">Headlines, brand names, key figures</span></div>
+      <div class="sp-body">
+        <div class="sp-display">The spaces where business happens.</div>
+        <div class="weights" aria-hidden="true"><span style="font-weight:200">Drawn</span><span style="font-weight:500">then</span><span style="font-weight:800">built</span></div>
+      </div>
+    </li>
+    <li>
+      <div class="sp-meta"><b>Headings, navigation</b><span class="label">Archivo · normal width · 600</span><span class="label">Stands in for Beirut</span></div>
+      <div class="sp-body"><div class="sp-heading">Infrastructure &amp; finishing &amp; furniture</div></div>
+    </li>
+    <li>
+      <div class="sp-meta"><b>Reading</b><span class="label">Hanken Grotesk · 400 / 300 for large lead text</span><span class="label">Stands in for Devanagari Sangam MN</span></div>
+      <div class="sp-body"><p class="sp-body-text">GIMA exists to design and build the spaces where business happens: the store, the restaurant, the hotel floor. Spaces designed with authorship, built by our own team, and opened on the date we promised.</p></div>
+    </li>
+    <li>
+      <div class="sp-meta"><b>Figures and labels</b><span class="label">IBM Plex Sans · 500 · tabular figures</span><span class="label">Anything measured: m², years, weeks, sheet numbers</span></div>
+      <div class="sp-body sp-util">
+        <span>P-01 · [Operator] for [Brand] · [Mall], [City] · [000] m² · [Year]</span>
+        <span class="big">Since 1980 <i>·</i> 11 m² <i>to</i> 3,000 m² <i>·</i> 100+ <i>years combined team experience</i></span>
+      </div>
+    </li>
+    <li>
+      <div class="sp-meta"><b>Arabic, for a bilingual site</b><span class="label">Noto Kufi Arabic 800 · IBM Plex Sans Arabic</span><span class="label">Draft wording, for type testing only</span></div>
+      <div class="sp-body sp-ar" lang="ar">
+        <div class="d">تصميم. تنفيذ. تأثيث.</div>
+        <div class="t">منذ 1980، من 11 م² إلى أكثر من 3,000 م².</div>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<!-- MB-05 PHOTOGRAPHY -->
+<section class="wrap sheet" id="mb-05" data-sheet="MB-05 · Photography">
+  <div class="sheet-head">
+    <p class="label lead-red">MB-05 · Photography</p>
+    <div class="sh-main">
+      <h2>Correct the colour, keep the finish</h2>
+      <p>The archive photos come from different years and most carry a yellow tungsten cast. We correct each one once, so they sit together as a set while wood, leather, lacquer and lit glass still read true. Buyers judge finish, so photos where finish matters stay in colour.</p>
+    </div>
+  </div>
+  <div class="photo-grid">
+    <figure class="compare-wrap">
+      <div class="plate compare ticked" id="compare" data-ticks>
+        <img src="assets/graded/shoe-wall-true.jpg" alt="Shoe store after colour correction: backlit glass shelves, neutral whites" loading="lazy">
+        <div class="before"><img src="assets/shoe-wall.jpg" alt="The same shoe store as archived, with a strong yellow cast" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></div>
+        <svg class="divider" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line id="cmp-line" x1="58.93" y1="0" x2="41.07" y2="100"/></svg>
+        <span class="tag l">As archived</span><span class="tag r">Corrected</span>
+        <input type="range" id="cmp-range" min="0" max="100" value="50" aria-label="Compare archived and corrected photo" aria-valuetext="Archived 50%, corrected 50%">
+        <span class="handle" aria-hidden="true"><svg viewBox="0 0 22 22"><path d="M8 6 L3 11 L8 16 M14 6 L19 11 L14 16" fill="none" stroke="#fff" stroke-width="1.5"/></svg></span>
+      </div>
+      <figcaption class="cap"><span class="label">Drag or use arrow keys. The same 75° divider becomes the shell-to-opening comparison on project pages.</span></figcaption>
+    </figure>
+    <div class="photo-rules">
+      <span class="label">How every photo is treated</span>
+      <ul class="rules">
+        <li><b>Corrected once, at build time.</b> White balance pulled toward neutral, yellows calmed, contrast lifted slightly. No live filters in the browser.</li>
+        <li><b>Colour where finish is judged:</b> heroes, previews, elevations, detail shots.</li>
+        <li><b>Black and white only</b> for backgrounds behind text and for filtered-out entries.</li>
+        <li><b>Keep the ceilings</b> where bulkheads, coves and diffusers show infrastructure work.</li>
+        <li><b>Retouch out</b> price tags, sale signs and neighbouring shopfronts reflected in glass.</li>
+        <li><b>Show each photo's year.</b> Hiding dates looks worse than old dates.</li>
+      </ul>
+    </div>
+    <div class="strip">
+      <figure><div class="plate r45"><img src="assets/graded/charles-keith-hero-true.jpg" alt="Charles &amp; Keith store, corrected" loading="lazy" style="object-position:45% 50%"></div><figcaption class="label">Charles &amp; Keith · [Year]</figcaption></figure>
+      <figure><div class="plate r45"><img src="assets/graded/azzaro-menswear-true.jpg" alt="Azzaro menswear store, corrected" loading="lazy" style="object-position:50% 70%"></div><figcaption class="label">Azzaro · [Year]</figcaption></figure>
+      <figure><div class="plate r45"><img src="assets/graded/menswear-wood-true.jpg" alt="Menswear store with timber joinery, corrected" loading="lazy"></div><figcaption class="label">[Brand] · [Year]</figcaption></figure>
+      <figure><div class="plate r45"><img src="assets/graded/shirt-wall-true.jpg" alt="Shirt wall with cubbies and linear lights" loading="lazy" style="object-position:40% 50%"></div><figcaption class="label">[Brand] · [Year]</figcaption></figure>
+      <figure><div class="plate r45"><img src="assets/graded/leather-goods-lounge-true.jpg" alt="Leather goods lounge, corrected" loading="lazy" style="object-position:60% 50%"></div><figcaption class="label">[Brand] · [Year]</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- MB-06 DRAWING MARKS -->
+<section class="wrap sheet" id="mb-06" data-sheet="MB-06 · Drawing marks">
+  <div class="sheet-head">
+    <p class="label lead-red">MB-06 · Drawing marks</p>
+    <div class="sh-main">
+      <h2>A small kit taken from the guideline</h2>
+      <p>Every mark already exists in GIMA's guideline or in its working drawings. Each has one job and a fixed place, so the site feels drafted without dressing up as a blueprint.</p>
+    </div>
+  </div>
+  <ul class="marks">
+    <li>
+      <div class="mk"><svg viewBox="0 0 240 150" aria-hidden="true">
+        <g stroke="#2B2B2B" stroke-width="1"><line x1="0" y1="45" x2="240" y2="45"/><line x1="0" y1="105" x2="240" y2="105"/><line x1="75" y1="0" x2="75" y2="150"/><line x1="165" y1="0" x2="165" y2="150"/></g>
+        <rect x="75" y="45" width="90" height="60" fill="#D72A27"/>
+        <g stroke="#fff" stroke-width="1.5"><line x1="69" y1="51" x2="81" y2="39"/><line x1="159" y1="51" x2="171" y2="39"/><line x1="69" y1="111" x2="81" y2="99"/><line x1="159" y1="111" x2="171" y2="99"/></g>
+      </svg></div>
+      <h3>Construction grid</h3><p>The logo's own guide lines. Used faintly behind the home hero and the portfolio index only.</p>
+    </li>
+    <li>
+      <div class="mk"><svg viewBox="0 0 240 150" aria-hidden="true">
+        <rect x="40" y="25" width="160" height="100" fill="#0B0B0B" stroke="#2B2B2B"/>
+        <g stroke="#fff" stroke-width="1.5"><line x1="32" y1="33" x2="48" y2="17"/><line x1="192" y1="33" x2="208" y2="17"/><line x1="32" y1="133" x2="48" y2="117"/><line x1="192" y1="133" x2="208" y2="117"/></g>
+      </svg></div>
+      <h3>45° registration ticks</h3><p>Mark the corners of the hero photo, the index preview, the title block and the 3D stage. Nowhere else.</p>
+    </li>
+    <li>
+      <div class="mk"><svg viewBox="0 0 240 150" aria-hidden="true">
+        <rect x="20" y="20" width="200" height="110" fill="#2B2B2B"/>
+        <polygon points="20,20 138,20 108,130 20,130" fill="#9A9A9A"/>
+        <line x1="138" y1="20" x2="108" y2="130" stroke="#D72A27" stroke-width="2"/>
+      </svg></div>
+      <h3>The 75° cut</h3><p>The angle of the guideline cover. The only diagonal on the site: image wipes, slab ends and the comparison divider.</p>
+    </li>
+    <li>
+      <div class="mk"><svg viewBox="0 0 240 150" aria-hidden="true">
+        <g stroke="#fff" stroke-width="1"><line x1="30" y1="80" x2="210" y2="80"/><line x1="30" y1="62" x2="30" y2="98"/><line x1="210" y1="62" x2="210" y2="98"/></g>
+        <g stroke="#fff" stroke-width="1.5"><line x1="24" y1="86" x2="36" y2="74"/><line x1="204" y1="86" x2="216" y2="74"/></g>
+        <text x="120" y="68" fill="#fff" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="14" font-weight="500">3,000 m²</text>
+      </svg></div>
+      <h3>Dimension line</h3><p>Carries figures such as m² and weeks. Link underlines borrow it: a rule with ticked ends.</p>
+    </li>
+    <li>
+      <div class="mk"><svg viewBox="0 0 240 150" aria-hidden="true">
+        <rect x="150" y="96" width="6" height="6" fill="#D72A27"/>
+        <line x1="153" y1="99" x2="96" y2="62" stroke="#D72A27" stroke-width="1.5"/>
+        <polygon points="80,44 96,44 104,58 96,72 80,72 72,58" fill="#D72A27"/>
+        <text x="88" y="63" fill="#fff" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12" font-weight="500">01</text>
+      </svg></div>
+      <h3>Keynote tag</h3><p>Numbered hexagons point at what GIMA built on one elevation per project, with a written legend beside it.</p>
+    </li>
+    <li>
+      <div class="mk"><svg viewBox="0 0 240 150" aria-hidden="true">
+        <line x1="20" y1="50" x2="220" y2="50" stroke="#fff" stroke-width="1" stroke-dasharray="4 4"/>
+        <line x1="20" y1="72" x2="220" y2="72" stroke="#fff" stroke-width="1" stroke-dasharray="4 4"/>
+        <line x1="20" y1="100" x2="220" y2="100" stroke="#fff" stroke-width="1"/>
+        <text x="20" y="124" fill="#9A9A9A" font-family="IBM Plex Sans, sans-serif" font-size="11" letter-spacing="1">DUCT ABOVE CEILING</text>
+      </svg></div>
+      <h3>Hidden line</h3><p>Dashed 4/4 for things above the ceiling or behind a finish, such as ducts and cable trays. Solid for visible edges.</p>
+    </li>
+  </ul>
+</section>
+
+<!-- MB-07 REGISTER -->
+<section class="wrap sheet" id="mb-07" data-sheet="MB-07 · Portfolio index">
+  <div class="sheet-head">
+    <p class="label lead-red">MB-07 · Portfolio index</p>
+    <div class="sh-main">
+      <h2>The register: every project, filed</h2>
+      <p>The portfolio is one list that reads three ways. On desktop, a table on black with a large colour preview that follows the row you point at. On phones, image-first cards. Once enough projects have verified areas, a same-scale plan view shows every footprint at true size. Filters dim entries rather than remove them, so the volume of work stays visible.</p>
+    </div>
+  </div>
+  <div class="register" id="register">
+    <div class="reg-list">
+      <div class="tbl-wrap">
+        <table class="reg-tbl">
+          <caption class="sr">Example portfolio register. Values in brackets are placeholders for GIMA to supply.</caption>
+          <thead><tr>
+            <th scope="col">No.</th><th scope="col">Brand · client</th><th scope="col" class="hide-s">Sector</th><th scope="col" class="hide-s">Mall, city</th>
+            <th scope="col" class="r hide-s">m²</th><th scope="col" class="hide-s">Scope</th><th scope="col" class="r">Year</th>
+          </tr></thead>
+          <tbody>
+            <tr data-img="assets/graded/azzaro-menswear-true.jpg" data-pos="50% 72%" data-alt="Azzaro menswear store" class="is-active">
+              <td class="num">P-01</td>
+              <td><button type="button" class="row-btn"><span class="bn">Azzaro</span><span class="cl">[Operator] for Azzaro</span><span class="mo">Menswear · [Mall], [City]</span></button></td>
+              <td class="hide-s">Retail · Menswear</td><td class="hide-s ph">[Mall], [City]</td><td class="r num hide-s ph">[000]</td>
+              <td class="hide-s"><span class="scope-cells" aria-label="Example scope: concept by brand; shop drawings, infrastructure, finishing, joinery by GIMA"><i></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i></span></td>
+              <td class="r num ph">[Year]</td>
+            </tr>
+            <tr data-img="assets/graded/charles-keith-hero-true.jpg" data-pos="50% 50%" data-alt="Charles &amp; Keith store">
+              <td class="num">P-02</td>
+              <td><button type="button" class="row-btn"><span class="bn">Charles &amp; Keith</span><span class="cl">[Operator] for Charles &amp; Keith</span><span class="mo">Footwear, bags · [Mall], [City]</span></button></td>
+              <td class="hide-s">Retail · Footwear, bags</td><td class="hide-s ph">[Mall], [City]</td><td class="r num hide-s ph">[000]</td>
+              <td class="hide-s"><span class="scope-cells" aria-label="Example scope: concept by brand; the rest by GIMA"><i></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i></span></td>
+              <td class="r num ph">[Year]</td>
+            </tr>
+            <tr data-img="assets/graded/leather-goods-lounge-true.jpg" data-pos="50% 50%" data-alt="Leather goods store with lounge seating">
+              <td class="num">P-03</td>
+              <td><button type="button" class="row-btn"><span class="bn">[Brand]</span><span class="cl">[Client]</span><span class="mo">Leather goods · [Mall], [City]</span></button></td>
+              <td class="hide-s">Retail · Leather goods</td><td class="hide-s ph">[Mall], [City]</td><td class="r num hide-s ph">[000]</td>
+              <td class="hide-s"><span class="scope-cells" aria-label="Example scope: all five by GIMA"><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i></span></td>
+              <td class="r num ph">[Year]</td>
+            </tr>
+            <tr data-img="assets/graded/shoe-wall-true.jpg" data-pos="50% 50%" data-alt="Shoe store with backlit glass shelves">
+              <td class="num">P-04</td>
+              <td><button type="button" class="row-btn"><span class="bn">[Brand]</span><span class="cl">[Client]</span><span class="mo">Footwear · [Mall], [City]</span></button></td>
+              <td class="hide-s">Retail · Footwear</td><td class="hide-s ph">[Mall], [City]</td><td class="r num hide-s ph">[000]</td>
+              <td class="hide-s"><span class="scope-cells" aria-label="Example scope: all five by GIMA"><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i></span></td>
+              <td class="r num ph">[Year]</td>
+            </tr>
+            <tr data-img="assets/graded/shirt-wall-true.jpg" data-pos="45% 50%" data-alt="Menswear store with a shirt wall">
+              <td class="num">P-05</td>
+              <td><button type="button" class="row-btn"><span class="bn">[Brand]</span><span class="cl">[Client]</span><span class="mo">Menswear · [Mall], [City]</span></button></td>
+              <td class="hide-s">Retail · Menswear</td><td class="hide-s ph">[Mall], [City]</td><td class="r num hide-s ph">[000]</td>
+              <td class="hide-s"><span class="scope-cells" aria-label="Example scope: concept and shop drawings by brand; the rest by GIMA"><i></i><i></i><i class="g"></i><i class="g"></i><i class="g"></i></span></td>
+              <td class="r num ph">[Year]</td>
+            </tr>
+            <tr data-img="assets/graded/menswear-wood-true.jpg" data-pos="50% 50%" data-alt="Menswear store with timber joinery">
+              <td class="num">P-06</td>
+              <td><button type="button" class="row-btn"><span class="bn">[Brand]</span><span class="cl">[Client]</span><span class="mo">Menswear · [Mall], [City]</span></button></td>
+              <td class="hide-s">Retail · Menswear</td><td class="hide-s ph">[Mall], [City]</td><td class="r num hide-s ph">[000]</td>
+              <td class="hide-s"><span class="scope-cells" aria-label="Example scope: all five by GIMA"><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i></span></td>
+              <td class="r num ph">[Year]</td>
+            </tr>
+            <tr data-img="assets/graded/accessories-display-true.jpg" data-pos="50% 50%" data-alt="Accessories display">
+              <td class="num">P-07</td>
+              <td><button type="button" class="row-btn"><span class="bn">[Brand]</span><span class="cl">[Client]</span><span class="mo">Accessories · [Mall], [City]</span></button></td>
+              <td class="hide-s">Retail · Accessories</td><td class="hide-s ph">[Mall], [City]</td><td class="r num hide-s ph">[000]</td>
+              <td class="hide-s"><span class="scope-cells" aria-label="Example scope: joinery and finishing by GIMA only"><i></i><i></i><i></i><i class="g"></i><i class="g"></i></span></td>
+              <td class="r num ph">[Year]</td>
+            </tr>
+            <tr data-img="assets/graded/menswear-floor-true.jpg" data-pos="50% 50%" data-alt="Large fashion floor">
+              <td class="num">P-08</td>
+              <td><button type="button" class="row-btn"><span class="bn">[Brand]</span><span class="cl">[Client]</span><span class="mo">Fashion · [Mall], [City]</span></button></td>
+              <td class="hide-s">Retail · Fashion</td><td class="hide-s ph">[Mall], [City]</td><td class="r num hide-s ph">[000]</td>
+              <td class="hide-s"><span class="scope-cells" aria-label="Example scope: all five by GIMA"><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i></span></td>
+              <td class="r num ph">[Year]</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="reg-legend label">
+        <span>Scope, in order:</span><span>Concept · Shop drawings · Infrastructure &amp; MEP · Finishing · Joinery &amp; furniture</span>
+        <span><span class="scope-cells"><i class="g"></i></span> GIMA</span><span><span class="scope-cells"><i></i></span> By brand or others</span>
+      </div>
+    </div>
+    <div class="reg-side">
+      <div class="plate reg-preview ticked" id="reg-preview" data-ticks>
+        <div class="layer"><img src="assets/graded/azzaro-menswear-true.jpg" alt="Azzaro menswear store" style="object-position:50% 72%"></div>
+      </div>
+      <p class="label" id="reg-cap">P-01 · Azzaro · preview follows the row</p>
+    </div>
+  </div>
+  <div class="reg-extras">
+    <div>
+      <h3>Group by brand</h3>
+      <p>Repeat clients fold into one line, "Charles &amp; Keith × [N] stores", which opens into each unit. For a brand planning a rollout, repeat business is the first proof they look for.</p>
+    </div>
+    <div class="same-scale">
+      <h3>Same-scale plan</h3>
+      <p>Every footprint drawn at one true scale. Here, the two ends of GIMA's documented range:</p>
+      <svg viewBox="0 0 320 150" role="img" aria-label="An 11 square metre square beside a 3,000 square metre rectangle, drawn at the same scale">
+        <rect x="1" y="1" width="250" height="100" fill="none" stroke="#fff" stroke-width="1"/>
+        <text x="126" y="56" fill="#9A9A9A" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12">3,000 m² (60 × 50 m)</text>
+        <rect x="276" y="85" width="16.6" height="16.6" fill="#D72A27"/>
+        <text x="266" y="124" fill="#fff" font-family="IBM Plex Sans, sans-serif" font-size="12">11 m²</text>
+      </svg>
+    </div>
+    <div>
+      <h3>Rules for the data</h3>
+      <p>Columns with no verified values are hidden. Years are always shown. A map of Egypt comes later, only with verified locations and the official outline approved.</p>
+    </div>
+  </div>
+</section>
+
+<!-- MB-08 PROJECT SHEET -->
+<section class="wrap sheet" id="mb-08" data-sheet="MB-08 · Project sheet">
+  <div class="sheet-head">
+    <p class="label lead-red">MB-08 · Project sheet</p>
+    <div class="sh-main">
+      <h2>Each project answers the buyer's questions in order</h2>
+      <p>Who was the client, where, how big, when it opened, and which trades GIMA delivered. One straight-on photo carries numbered keynotes that point at the work itself. Point at a tag or a legend line to pair them.</p>
+    </div>
+  </div>
+  <div class="psheet">
+    <figure class="kn-fig">
+      <div class="plate r45" id="kn-plate">
+        <img src="assets/graded/azzaro-menswear-true.jpg" alt="Azzaro menswear store: gypsum ceiling with linear air diffusers and track lights, gloss white wall panels, lit display niches" loading="lazy">
+        <svg class="kn-lines" viewBox="0 0 100 125" preserveAspectRatio="none" aria-hidden="true">
+          <line x1="67" y1="17.5" x2="86" y2="8.75"/>
+          <line x1="14.1" y1="41" x2="8" y2="27.5"/>
+          <line x1="73.1" y1="53.1" x2="90" y2="42.5"/>
+          <line x1="51.1" y1="77.5" x2="34" y2="92.5"/>
+        </svg>
+        <span class="kn-term" style="left:67%;top:14%"></span>
+        <span class="kn-term" style="left:14.1%;top:32.8%"></span>
+        <span class="kn-term" style="left:73.1%;top:42.5%"></span>
+        <span class="kn-term" style="left:51.1%;top:62%"></span>
+        <button type="button" class="kn-tag" data-kn="1" style="left:86%;top:7%" aria-describedby="kn-1"><span>01</span></button>
+        <button type="button" class="kn-tag" data-kn="2" style="left:8%;top:22%" aria-describedby="kn-2"><span>02</span></button>
+        <button type="button" class="kn-tag" data-kn="3" style="left:90%;top:34%" aria-describedby="kn-3"><span>03</span></button>
+        <button type="button" class="kn-tag" data-kn="4" style="left:34%;top:74%" aria-describedby="kn-4"><span>04</span></button>
+      </div>
+      <figcaption class="cap"><span class="label">Example keynotes on an archive photo. GIMA to confirm the scope on this project.</span></figcaption>
+    </figure>
+    <div class="kn-side">
+      <dl class="tb">
+        <dt>Brand</dt><dd><span class="brandname">Azzaro</span></dd>
+        <dt>Client</dt><dd>[Operator] for Azzaro</dd>
+        <dt>Location</dt><dd class="ph">[Mall], [City]</dd>
+        <dt>Area</dt><dd class="num ph">[000] m²</dd>
+        <dt>Opened</dt><dd class="num ph">[Year] · programme [00] weeks</dd>
+        <dt>Roles</dt><dd>
+          <ul class="roles">
+            <li><span>Concept</span><span class="by-b">[Brand's global design / GIMA]</span></li>
+            <li><span>Shop drawings &amp; local adaptation</span><span class="by-g">GIMA</span></li>
+            <li><span>Infrastructure &amp; MEP</span><span class="by-g">GIMA</span></li>
+            <li><span>Finishing</span><span class="by-g">GIMA</span></li>
+            <li><span>Joinery &amp; furniture</span><span class="by-g">GIMA</span></li>
+            <li><span>Signage</span><span class="by-b">[By others]</span></li>
+          </ul>
+        </dd>
+      </dl>
+      <ol class="legend" id="kn-legend">
+        <li id="kn-1" data-kn="1"><span class="n">01</span><div><b>Infrastructure</b>Linear supply-air diffusers set into the gypsum ceiling</div></li>
+        <li id="kn-2" data-kn="2"><span class="n">02</span><div><b>Ceilings &amp; lighting</b>Dropped bulkhead with cove light and track spots</div></li>
+        <li id="kn-3" data-kn="3"><span class="n">03</span><div><b>Finishing</b>High-gloss white wall panelling</div></li>
+        <li id="kn-4" data-kn="4"><span class="n">04</span><div><b>Joinery</b>Lit display niches for ties and accessories</div></li>
+      </ol>
+      <div class="bcr">
+        <div><h3>Brief</h3><p>[Up to 60 words: what the client needed.]</p></div>
+        <div><h3>Constraint</h3><p>[For example: the brand's concept book, the mall's fit-out manual, night-only works, a fixed opening date.]</p></div>
+        <div><h3>Response</h3><p>[Up to 60 words: what GIMA did about it.]</p></div>
+      </div>
+    </div>
+  </div>
+  <ol class="sheet-order" aria-label="Order of a project page">
+    <li>Cover and title block</li><li>Brief, constraint, response</li><li>Scope delivered</li><li>Elevation with keynotes</li>
+    <li>Shell to opening, if a shell photo exists</li><li>Detail shots</li><li>Plan, if drawings are supplied</li><li>Programme in weeks</li>
+    <li>3D model, flagships only</li><li>Client's words</li><li>Download case sheet (PDF)</li><li>Next project</li>
+  </ol>
+</section>
+
+<!-- MB-09 TURNKEY SCOPE -->
+<section class="wrap sheet" id="mb-09" data-sheet="MB-09 · Turnkey scope">
+  <div class="sheet-head">
+    <p class="label lead-red">MB-09 · Turnkey scope</p>
+    <div class="sh-main">
+      <h2>Turnkey, shown as scope</h2>
+      <p>The scope stack is the turnkey diagram. It borrows the guideline's stacked swatches. On the Services page every slab fills. On a project page only what GIMA delivered fills, and the rest is labelled by brand or by others. That honesty is what makes "turnkey" believable where it is claimed.</p>
+    </div>
+  </div>
+  <div class="stack-wrap" id="stack-wrap">
+    <div class="amp" aria-hidden="true">Infrastructure &amp; finishing &amp; furniture</div>
+    <div class="stack-ctl">
+      <span class="label" id="stack-label">Show</span>
+      <div class="seg" role="group" aria-labelledby="stack-label">
+        <button type="button" data-stack="all" aria-pressed="true">Services page</button>
+        <button type="button" data-stack="example" aria-pressed="false">Example project</button>
+      </div>
+    </div>
+    <ol class="stack" id="stack" aria-live="polite">
+      <li style="--i:0" data-ex="brand"><span class="sl">Concept design</span><span class="st">GIMA</span></li>
+      <li style="--i:1" data-ex="gima"><span class="sl">Shop drawings &amp; local adaptation</span><span class="st">GIMA</span></li>
+      <li style="--i:2" data-ex="gima"><span class="sl">Infrastructure &amp; MEP</span><span class="st">GIMA</span></li>
+      <li style="--i:3" data-ex="gima"><span class="sl">Finishing</span><span class="st">GIMA</span></li>
+      <li style="--i:4" data-ex="gima"><span class="sl">Joinery &amp; furniture</span><span class="st">GIMA</span></li>
+    </ol>
+    <div class="stack-note">
+      <span class="label">Why it works</span>
+      <p>International brands often bring their own concept. Saying so, and showing everything else GIMA carried from bare shell to opening, reads as confidence.</p>
+      <p>Red fill means delivered by GIMA. Every slab also carries a written label, so the colour is never the only signal.</p>
+    </div>
+  </div>
+  <ol class="process" aria-label="GIMA's five-stage process">
+    <li><span class="pn">01</span><h3>Consultation</h3><p>Understanding client needs and preferences.</p></li>
+    <li><span class="pn">02</span><h3>Concept development</h3><p>Creating tailored designs that align with the vision.</p></li>
+    <li><span class="pn">03</span><h3>Design presentation</h3><p>Detailed plans and visuals for approval.</p></li>
+    <li><span class="pn">04</span><h3>Implementation</h3><p>Managing the execution from start to finish.</p></li>
+    <li><span class="pn">05</span><h3>Final delivery</h3><p>Handover, client satisfaction and post-project support.</p></li>
+  </ol>
+</section>
+
+<!-- MB-10 3D -->
+<section class="wrap sheet" id="mb-10" data-sheet="MB-10 · 3D assembly">
+  <div class="sheet-head">
+    <p class="label lead-red">MB-10 · 3D assembly</p>
+    <div class="sh-main">
+      <h2>Yes to 3D, as evidence rather than decoration</h2>
+      <p>We agree with the 3D idea, with one condition: the model must show what a photo cannot. Turnkey is a stack of layers, so the model assembles a store in build order, from the bare mall unit through ducts and ceilings to finishes, joinery and lights. A spinning model of a finished shop would prove nothing a photo doesn't. Below is a working placeholder built in code. Real projects replace it with the design team's own models.</p>
+    </div>
+  </div>
+  <div class="a900" id="a900">
+    <div class="a900-stage">
+      <div class="stage ticked" data-ticks data-3d-canvas>
+        <img class="poster" src="assets/assembly-poster.jpg" alt="Line drawing of a placeholder store unit assembled in six layers" data-3d-poster>
+        <span class="ph-tag">[Placeholder model · real project model to follow]</span>
+        <button type="button" class="btn primary load" data-3d-load>Load the 3D model<span class="c a"></span><span class="c b"></span></button>
+        <p class="fallback" data-3d-fallback hidden>This browser can't show the 3D view. The six steps below still describe each layer.</p>
+      </div>
+      <div class="a900-ctl">
+        <ul class="steps" aria-label="Build stages">
+          <li><button type="button" data-step="1" aria-pressed="false"><b>1</b>Shell</button></li>
+          <li><button type="button" data-step="2" aria-pressed="false"><b>2</b>Infrastructure</button></li>
+          <li><button type="button" data-step="3" aria-pressed="false"><b>3</b>Ceilings</button></li>
+          <li><button type="button" data-step="4" aria-pressed="false"><b>4</b>Finishes</button></li>
+          <li><button type="button" data-step="5" aria-pressed="false"><b>5</b>Joinery</button></li>
+          <li><button type="button" data-step="6" aria-pressed="true"><b>6</b>Opening day</button></li>
+        </ul>
+        <button type="button" class="btn" data-play>Play the build</button>
+        <button type="button" class="btn" data-explode aria-pressed="false">Explode layers</button>
+      </div>
+      <div class="a900-caption" aria-live="polite">
+        <h3 data-3d-title>Lighting &amp; opening day</h3>
+        <p data-3d-caption>Lights on, snag list closed, keys handed over on the promised date.</p>
+      </div>
+    </div>
+    <div class="a900-text">
+      <div>
+        <h3>Where it appears</h3>
+        <ul>
+          <li>One section on the home page, played as a scroll-linked image sequence, so no 3D engine is needed there.</li>
+          <li>Two or three flagship projects get an interactive model that loads only on tap, after the photos.</li>
+          <li>Every 3D moment ends on the real photograph of the trading store, taken from the same angle.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>How it's built</h3>
+        <ul>
+          <li>three.js with white hairlines on dark planes, so the model looks like GIMA's drawings, not a glossy render.</li>
+          <li>Layers named shell, infrastructure, ceilings, finishes, joinery and lighting, matching the scope stack.</li>
+          <li>Under 2.5 MB per model on desktop and 1.2 MB on mobile. It never auto-rotates or loads above the fold.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>What we need from GIMA</h3>
+        <ul>
+          <li>Original 3D design files for two or three flagships (SketchUp, 3ds Max, Revit or Rhino).</li>
+          <li>A trade-by-trade scope for each: what GIMA delivered and what the brand or others did.</li>
+          <li>The finished-store photo, plus any site photos of the bare shell at handover.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MB-11 MOTION -->
+<section class="wrap sheet" id="mb-11" data-sheet="MB-11 · Motion">
+  <div class="sheet-head">
+    <p class="label lead-red">MB-11 · Motion</p>
+    <div class="sh-main">
+      <h2>Mechanical, measured, rationed</h2>
+      <p>Motion behaves like a drafting pen and a joiner's fit: it starts deliberately, lands exactly, and never bounces. Only four things move: the pen-then-fill trace, the 75° wipe, the scope slabs and the 3D build. Switch the header to "As-built" to see every page in its finished state.</p>
+    </div>
+  </div>
+  <div class="motion">
+    <ul class="curves">
+      <li>
+        <svg viewBox="0 0 72 72" aria-hidden="true"><rect x="0" y="0" width="72" height="72" fill="none" stroke="#2B2B2B"/><path d="M0 72 C46.8 72 25.2 0 72 0" fill="none" stroke="#fff" stroke-width="1.5"/></svg>
+        <div><b>Line draw</b><p class="num">cubic-bezier(.65, 0, .35, 1) · 600–800 ms · strokes 30 ms apart, in drafting order</p></div>
+      </li>
+      <li>
+        <svg viewBox="0 0 72 72" aria-hidden="true"><rect x="0" y="0" width="72" height="72" fill="none" stroke="#2B2B2B"/><path d="M0 72 C14.4 14.4 14.4 0 72 0" fill="none" stroke="#D72A27" stroke-width="1.5"/></svg>
+        <div><b>Fill and wipe</b><p class="num">cubic-bezier(.2, .8, .2, 1) · 400–500 ms · slabs 120 ms apart</p></div>
+      </li>
+      <li>
+        <svg viewBox="0 0 72 72" aria-hidden="true"><rect x="0" y="0" width="72" height="72" fill="none" stroke="#2B2B2B"/><path d="M0 72 C0 72 41.8 0 72 0" fill="none" stroke="#fff" stroke-width="1.5"/></svg>
+        <div><b>Hover and underline</b><p class="num">ease-out · 180 ms</p></div>
+      </li>
+      <li>
+        <svg viewBox="0 0 72 72" aria-hidden="true"><rect x="0" y="0" width="72" height="72" fill="none" stroke="#2B2B2B"/><path d="M0 72 C46.8 72 25.2 0 72 0" fill="none" stroke="#fff" stroke-width="1.5" stroke-dasharray="4 4"/></svg>
+        <div><b>3D camera</b><p class="num">cubic-bezier(.65, 0, .35, 1) · 900–1200 ms</p></div>
+      </li>
+    </ul>
+    <div class="motion-rules">
+      <ul class="rules">
+        <li><b>Each reveal plays once per visit.</b> Content is on the page from the first frame; animation only plays over it.</li>
+        <li><b>One sequence per screen.</b> On phones, only the card in the middle of the screen animates.</li>
+        <li><b>No count-ups, parallax or scroll hijacking.</b> Figures sit still, like a record.</li>
+        <li><b>Reduced motion is respected.</b> Visitors who ask for less motion get "As-built" by default.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- MB-12 INTERFACE -->
+<section class="wrap sheet" id="mb-12" data-sheet="MB-12 · Interface">
+  <div class="sheet-head">
+    <p class="label lead-red">MB-12 · Interface</p>
+    <div class="sh-main">
+      <h2>Sharp edges, plain labels</h2>
+      <p>No rounded corners, shadows or gradients anywhere. Controls are real buttons and links, at least 44px tall on touch, with a visible red focus ring. Try them.</p>
+    </div>
+  </div>
+  <div class="ui-grid">
+    <div class="ui-cell">
+      <div class="demo"><a class="btn primary" href="#mb-16">Start a project<span class="c a"></span><span class="c b"></span></a><a class="btn" href="#mb-07">See the work<span class="c a"></span><span class="c b"></span></a></div>
+      <p>Buttons. One red primary per screen. Registration ticks appear at the corners on hover and focus.</p>
+    </div>
+    <div class="ui-cell">
+      <div class="demo"><a class="dlink" href="#mb-03">View all projects<span class="e a"></span><span class="e b"></span></a><a class="dlink demo" href="#mb-03">Hover state<span class="e a"></span><span class="e b"></span></a></div>
+      <p>Links. The underline draws as a dimension line with ticked ends.</p>
+    </div>
+    <div class="ui-cell">
+      <div class="demo"><span class="btn focus-demo" aria-hidden="true">Focused</span><span class="label lead-red">A-200 · Services</span></div>
+      <p>Focus ring in red with a 3px gap. Section labels use a short red leader. The red is never the text itself.</p>
+    </div>
+    <div class="ui-cell">
+      <div class="demo" style="flex-direction:column;align-items:flex-start;gap:10px">
+        <span class="scope-cells" aria-hidden="true"><i></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i></span>
+        <span class="num" style="font-size:22px">3,000 <span style="color:var(--dim);font-size:14px">m²</span></span>
+      </div>
+      <p>Scope cells and figures. The figure is white, the unit grey, and digits line up in columns.</p>
+    </div>
+    <div class="ui-cell wide">
+      <div class="demo"><div class="title-block-demo ticked" data-ticks><span><span class="label" style="color:var(--white)">P-03 · [Brand]</span><br><span class="label">Download case sheet (PDF)</span></span><img src="assets/logo-wordmark-white.png" alt="" width="42" style="width:42px"></div></div>
+      <p>Title block. Fixed at the bottom right on desktop, like the corner of a drawing sheet: current project, download link and the animation setting. This page has a working one. Phones don't show it.</p>
+    </div>
+    <div class="light-sheet">
+      <div class="ls-head">
+        <span class="label">Enquiry form · light sheet</span>
+        <h3 class="big">Tell us your opening date.</h3>
+        <p>Brands plan backwards from opening day, so the form starts there. Beside it goes a named contact, phone and WhatsApp: [Name, title, number].</p>
+      </div>
+      <form id="demo-form" novalidate>
+        <div class="f"><label for="f-date">Target opening date</label><input id="f-date" name="date" type="month"></div>
+        <div class="f"><label for="f-brand">Brand</label><input id="f-brand" name="brand" type="text" autocomplete="organization"></div>
+        <div class="f"><label for="f-loc">Mall or location</label><input id="f-loc" name="loc" type="text"></div>
+        <div class="f"><label for="f-area">Approximate area, m²</label><input id="f-area" name="area" type="number" inputmode="numeric" min="1"></div>
+        <div class="f full"><label for="f-concept">Concept design</label>
+          <select id="f-concept" name="concept"><option>Supplied by the brand</option><option>We need GIMA to design it</option><option>Not sure yet</option></select></div>
+        <div class="form-end"><button type="submit" class="btn primary">Send enquiry<span class="c a"></span><span class="c b"></span></button><span class="ok" id="form-ok" aria-live="polite"></span></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- MB-13 VOICE -->
+<section class="wrap sheet" id="mb-13" data-sheet="MB-13 · Voice">
+  <div class="sheet-head">
+    <p class="label lead-red">MB-13 · Voice</p>
+    <div class="sh-main">
+      <h2>State, don't sell</h2>
+      <p>Short sentences, facts in place of adjectives, no "best" or "leading". Every line below uses only what GIMA's profile and guideline already say.</p>
+    </div>
+  </div>
+  <ul class="voice">
+    <li>The spaces where business happens.</li>
+    <li>Infrastructure. Finishing. Furniture. One team from shell to opening.</li>
+    <li>From 11 m² to over 3,000 m². Since 1980.</li>
+    <li>Turnkey means you hand us the shell and the date.</li>
+    <li>Forty-five years in, the aim is to be the one clients never have to worry about.</li>
+  </ul>
+  <div class="voice-rules">
+    <div><h3>Only what's on file</h3><p>Every figure, client, city and date is verified or it doesn't appear.</p></div>
+    <div><h3>Write for the opening date</h3><p>Talk about handover, programme, scope and trades.</p></div>
+    <div><h3>Name the limits</h3><p>Say plainly what GIMA did not do on a project.</p></div>
+    <div><h3>Plain headings</h3><p>Everyday business English. Drafting terms stay in the small labels.</p></div>
+  </div>
+</section>
+
+<!-- MB-14 REFERENCES -->
+<section class="wrap sheet" id="mb-14" data-sheet="MB-14 · References">
+  <div class="sheet-head">
+    <p class="label lead-red">MB-14 · References</p>
+    <div class="sh-main">
+      <h2>What to look at, and what to take from it</h2>
+      <p>Each reference is here for one specific technique, not its overall look. The websites were found through search; our research environment couldn't open them directly, so please check each link yourself before we discuss.</p>
+    </div>
+  </div>
+  <div class="refs">
+    <div>
+      <span class="label">Websites</span>
+      <ul class="ref-list">
+        <li><a href="https://www.herzogdemeuron.com/index/projects/complete-works.html">Herzog &amp; de Meuron · Complete works</a><span class="u">herzogdemeuron.com</span><p>A numbered, exhaustive project index. The model for the register: every project filed, nothing hidden.</p></li>
+        <li><a href="https://www.checklandkindleysides.com/our-work">Checkland Kindleysides · Our work</a><span class="u">checklandkindleysides.com</span><p>The closest peer: a retail design firm with decades of brand work. How they present client brands and scope.</p></li>
+        <li><a href="https://universaldesignstudio.com/work">Universal Design Studio · Work</a><span class="u">universaldesignstudio.com</span><p>Retail and hospitality interiors. Filtering by sector without losing the sense of volume.</p></li>
+        <li><a href="https://becklondon.uk/our-work/">BECK London · Our work</a><span class="u">becklondon.uk</span><p>A fit-out contractor, not a designer. How a builder presents delivery credibility.</p></li>
+        <li><a href="https://www.designbyroar.com/">Roar, Dubai</a><span class="u">designbyroar.com</span><p>A regional benchmark for retail and hospitality interiors in the Middle East.</p></li>
+        <li><a href="https://creativedesignegypt.com/en">Creative3Design, Cairo</a><span class="u">creativedesignegypt.com</span><p>A local competitor. Useful as the bar to clear, not as a model.</p></li>
+        <li><a href="https://lusion.co/">Lusion</a><span class="u">lusion.co</span><p>Award-winning WebGL studio. The standard for how smooth real-time 3D can feel.</p></li>
+        <li><a href="https://aristidebenoist.com/">Aristide Benoist</a><span class="u">aristidebenoist.com</span><p>Image list with WebGL transitions. The timing of row-to-image previews.</p></li>
+      </ul>
+    </div>
+    <div>
+      <span class="label">Technical references, checked</span>
+      <ul class="ref-list">
+        <li><a href="https://github.com/codrops/ImageRevealHover">Codrops · ImageRevealHover</a><span class="u">github.com/codrops/ImageRevealHover</span><p>Code starting point for the register's preview. We use the fixed-frame version, not the cursor-following one.</p></li>
+        <li><a href="https://threejs.org">three.js</a><span class="u">threejs.org</span><p>The 3D renderer: hairline edges, flat fills, render only when something changes.</p></li>
+        <li><a href="https://gsap.com/docs/v3/Plugins/ScrollTrigger/">GSAP ScrollTrigger</a><span class="u">gsap.com</span><p>The once-only reveals, the slab fill and the home-page image sequence. Free for commercial use.</p></li>
+        <li><a href="https://fspy.io">fSpy</a><span class="u">fspy.io</span><p>Matches the 3D camera to the real store photo, so the model dissolves into the built room.</p></li>
+        <li><a href="https://gltf-transform.dev">glTF Transform</a><span class="u">gltf-transform.dev</span><p>Shrinks the design team's exports to web size, and fails the build if a model is too heavy.</p></li>
+        <li><a href="https://help.sketchup.com/en/sketchup/working-gltf-files">SketchUp GLB export</a><span class="u">help.sketchup.com</span><p>The export path we hand to GIMA's design team.</p></li>
+        <li><a href="https://github.com/sparkjsdev/spark">Spark</a><span class="u">github.com/sparkjsdev/spark</span><p>Later phase: photoreal captures of one or two stores still trading, if a test capture passes.</p></li>
+        <li><a href="https://github.com/matterport/showcase-sdk">Matterport Showcase SDK</a><span class="u">github.com/matterport/showcase-sdk</span><p>Two ideas only: the dollhouse cutaway view and the tag model. Its own embed reads like a property listing.</p></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- MB-15 AVOID -->
+<section class="wrap sheet" id="mb-15" data-sheet="MB-15 · What we avoid">
+  <div class="sheet-head">
+    <p class="label lead-red">MB-15 · What we avoid</p>
+    <div class="sh-main">
+      <h2>The things that would make it generic, or untrue</h2>
+    </div>
+  </div>
+  <ul class="avoid">
+    <li>Loaders, splash screens or pinned heroes that delay the first real store.</li>
+    <li>Yellow, uncorrected photos, and sepia or vintage filters. Black and white wherever finish is judged.</li>
+    <li>The drawing reveal on every image, or automatic "sketch filter" traces.</li>
+    <li>Architect cosplay: sheet codes as navigation, crosshair cursors, "approved" stamps, blueprint-blue backgrounds.</li>
+    <li>Claiming "designed by GIMA" on franchise work, or implying the brand was the client when it was a franchisee.</li>
+    <li>Invented counts, totals or on-time rates, and numbers that count up.</li>
+    <li>Red as a large field beyond the logo, red body text on black, two reds, red glows or gradients.</li>
+    <li>Rounded corners, glass effects, drop shadows, and diagonals at any angle other than 75°.</li>
+    <li>3D above the fold, auto-rotating models, game-style walkthroughs, glossy photoreal renders.</li>
+    <li>Custom cursors, cursor trails, parallax, smooth-scroll hijacking, scrambled text.</li>
+    <li>Stock or AI-generated interiors shown as GIMA work.</li>
+    <li>Retyping the GIMA wordmark in a font. The logo is always the supplied artwork.</li>
+    <li>Icon grids for services, and carousels for the portfolio.</li>
+  </ul>
+</section>
+
+<!-- MB-16 QUESTIONS -->
+<section class="wrap sheet" id="mb-16" data-sheet="MB-16 · Questions">
+  <div class="sheet-head">
+    <p class="label lead-red">MB-16 · Questions</p>
+    <div class="sh-main">
+      <h2>What we need to decide together</h2>
+      <p>Numbered so we can refer to them when we talk. The first group shapes the sitemap and wireframes, so those matter most now.</p>
+    </div>
+  </div>
+  <div class="qs">
+    <div class="qgroup">
+      <h3>Before wireframes</h3>
+      <ol class="qlist">
+        <li><span class="qn">Q1</span><span>Does "Drawn, then built" feel right, or does one of the other three directions speak to you more?</span></li>
+        <li><span class="qn">Q2</span><span>Arabic: do we need a bilingual site at launch, or English first with Arabic in a second phase?</span></li>
+        <li><span class="qn">Q3</span><span>Should the site lead with retail, or give equal weight to hospitality, corporate, entertainment and residential work?</span></li>
+        <li><span class="qn">Q4</span><span>How prominent should Elbanna Design Group be next to GIMA?</span></li>
+        <li><span class="qn">Q5</span><span>Which red is correct, #D72A27 or #C63C32? Is there a Pantone reference?</span></li>
+        <li><span class="qn">Q6</span><span>Who is the named contact on the site (name, title, phone, WhatsApp), and what response time can you commit to?</span></li>
+        <li><span class="qn">Q7</span><span>After launch, who adds new projects? This decides whether we need a content management system.</span></li>
+        <li><span class="qn">Q8</span><span>Are there competitor or peer websites you admire, or dislike?</span></li>
+      </ol>
+    </div>
+    <div class="qgroup">
+      <h3>Content to gather in parallel</h3>
+      <ol class="qlist">
+        <li><span class="qn">Q9</span><span>Which brands and operators can we name, and which logos can we show with written permission? Were Azzaro and Charles &amp; Keith direct clients or local franchisees?</span></li>
+        <li><span class="qn">Q10</span><span>For 6–8 flagship projects: brand, client, mall, city, m², year, weeks from handover to opening, and which trades GIMA delivered.</span></li>
+        <li><span class="qn">Q11</span><span>Can promised and actual opening dates be verified for the flagships? If not, which clients would take a reference call?</span></li>
+        <li><span class="qn">Q12</span><span>Which projects are from the last five years, and can we budget a new photo shoot of 6–8 of them before launch?</span></li>
+        <li><span class="qn">Q13</span><span>Do you build joinery and furniture in your own workshop? Size, team, project directors, projects you can run at once.</span></li>
+        <li><span class="qn">Q14</span><span>3D: do the original design models still exist for your flagships, and who on your team can export them?</span></li>
+        <li><span class="qn">Q15</span><span>Do you have bare-shell or site-progress photos, as-built drawings or design renders?</span></li>
+        <li><span class="qn">Q16</span><span>Which malls have you worked in, and can we name them? Any awards, press or certifications we can show?</span></li>
+      </ol>
+    </div>
+  </div>
+  <div class="next">
+    <h2>Next: sitemap and wireframes</h2>
+    <div class="nx">
+      <p>Once we agree the direction and answer Q1 to Q8, we'll map the pages (Home, Work, each project, Services, Process, About, Contact) and wireframe them at desktop and phone sizes.</p>
+      <a class="dlink" href="#top">Back to the board<span class="e a"></span><span class="e b"></span></a>
+    </div>
+  </div>
+</section>
+
+<footer class="wrap">
+  <div class="foot">
+    <span class="brand"><img src="assets/logo-red-block.png" alt="GIMA" width="72" height="48" loading="lazy"><span class="lockup" style="display:block"><b>ELBANNA DESIGN GROUP</b><span>SHOP DESIGN | CONCEPT DESIGN | CONSTRUCTION</span></span></span>
+    <span class="label">Moodboard, draft 1, for discussion. Photos from GIMA's company profile, colour-corrected for review.</span>
+  </div>
+</footer>
+</main>
+
+<aside class="titleblock ticked is-off" data-ticks aria-label="Current sheet">
+  <div><div class="t1" id="tb-sheet">MB-00 · The board</div><div class="t2">GIMA website · Moodboard · Draft 1</div></div>
+  <img class="wm" src="assets/logo-wordmark-white.png" alt="" width="42">
+</aside>
+
+<script>
+(function(){
+  var root = document.documentElement;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function store(k, v){ try{ if(v===undefined) return window.localStorage.getItem(k); window.localStorage.setItem(k, v); }catch(e){ return null; } }
+  function session(k, v){ try{ if(v===undefined) return window.sessionStorage.getItem(k); window.sessionStorage.setItem(k, v); }catch(e){ return null; } }
+
+  /* animation mode */
+  var saved = store('gima-mb-mode');
+  var mode = saved || (reduce ? 'built' : 'drawing');
+  var modeBtns = document.querySelectorAll('[data-mode]');
+  function setMode(m){
+    mode = m; root.classList.toggle('as-built', m === 'built');
+    modeBtns.forEach(function(b){ b.setAttribute('aria-pressed', b.getAttribute('data-mode') === m ? 'true' : 'false'); });
+  }
+  modeBtns.forEach(function(b){ b.addEventListener('click', function(){ setMode(b.getAttribute('data-mode')); store('gima-mb-mode', mode); }); });
+  setMode(mode);
+  window.gimaAnimate = function(){ return mode === 'drawing'; };
+
+  /* registration ticks */
+  document.querySelectorAll('[data-ticks]').forEach(function(el){
+    ['tl','tr','bl','br'].forEach(function(c){ var s = document.createElement('span'); s.className = 'tk ' + c; s.setAttribute('aria-hidden','true'); el.appendChild(s); });
+  });
+
+  /* hero trace: pen, then fill */
+  var hero = document.getElementById('hero-plate');
+  var trace = hero.querySelector('.trace');
+  trace.querySelectorAll('g').forEach(function(g){ Array.prototype.forEach.call(g.children, function(p, k){ p.style.setProperty('--k', k); }); });
+  function sizeTrace(){ var w = hero.getBoundingClientRect().width || 800; trace.style.setProperty('--sw', (1.25 * 1600 / w).toFixed(2)); }
+  sizeTrace(); window.addEventListener('resize', sizeTrace);
+  var drawTimer;
+  function playTrace(){
+    if (!window.gimaAnimate()) return;
+    hero.classList.remove('is-drawing'); void hero.offsetWidth; hero.classList.add('is-drawing');
+    clearTimeout(drawTimer); drawTimer = setTimeout(function(){ hero.classList.remove('is-drawing'); }, 1700);
+  }
+  var h1 = document.getElementById('h1');
+  function settleH1(){ if (!window.gimaAnimate()) return; h1.classList.remove('h1-settle'); void h1.offsetWidth; h1.classList.add('h1-settle'); }
+  var ready = (document.fonts && document.fonts.ready) ? document.fonts.ready : Promise.resolve();
+  ready.then(function(){
+    if (!session('gima-mb-hero')) { settleH1(); playTrace(); session('gima-mb-hero', '1'); }
+  });
+  document.getElementById('replay-hero').addEventListener('click', function(){
+    if (!window.gimaAnimate()) { setMode('drawing'); store('gima-mb-mode', 'drawing'); }
+    settleH1(); playTrace();
+  });
+
+  /* compare slider, 75 degree divider */
+  var cmp = document.getElementById('compare'), range = document.getElementById('cmp-range'), cl = document.getElementById('cmp-line');
+  function setCmp(v){
+    cmp.style.setProperty('--x', v + '%');
+    cl.setAttribute('x1', (+v + 8.93).toFixed(2)); cl.setAttribute('x2', (+v - 8.93).toFixed(2));
+    range.setAttribute('aria-valuetext', 'Archived ' + v + '%, corrected ' + (100 - v) + '%');
+  }
+  range.addEventListener('input', function(){ setCmp(range.value); });
+  setCmp(range.value);
+
+  /* register: row -> preview with a 75 degree wipe */
+  var reg = document.getElementById('register'), prev = document.getElementById('reg-preview'), regCap = document.getElementById('reg-cap');
+  var rows = Array.prototype.slice.call(reg.querySelectorAll('tbody tr'));
+  var current = rows[0];
+  var idle = window.requestIdleCallback || function(f){ return setTimeout(f, 1200); };
+  idle(function(){ rows.forEach(function(r){ var im = new Image(); im.src = r.getAttribute('data-img'); }); });
+  function show(row){
+    if (row === current) return;
+    current.classList.remove('is-active'); row.classList.add('is-active'); current = row;
+    var layer = document.createElement('div'); layer.className = 'layer';
+    var img = document.createElement('img'); img.src = row.getAttribute('data-img'); img.alt = row.getAttribute('data-alt'); img.style.objectPosition = row.getAttribute('data-pos');
+    layer.appendChild(img);
+    var ticks = prev.querySelector('.tk'); prev.insertBefore(layer, ticks);
+    var olds = Array.prototype.slice.call(prev.querySelectorAll('.layer')).slice(0, -1);
+    function done(){ olds.forEach(function(o){ o.remove(); }); }
+    if (window.gimaAnimate() && layer.animate) {
+      var a = layer.animate([{clipPath:'polygon(0% 0%, 0% 0%, -17.9% 100%, 0% 100%)'},{clipPath:'polygon(0% 0%, 117.9% 0%, 100% 100%, 0% 100%)'}], {duration:450, easing:'cubic-bezier(.2,.8,.2,1)'});
+      a.onfinish = done;
+    } else done();
+    var no = row.children[0].textContent, bn = row.querySelector('.bn').textContent;
+    regCap.textContent = no + ' · ' + bn + ' · preview follows the row';
+  }
+  rows.forEach(function(r){
+    r.addEventListener('pointerenter', function(e){ if (e.pointerType === 'mouse') show(r); });
+    r.addEventListener('click', function(){ show(r); });
+    r.querySelector('.row-btn').addEventListener('focus', function(){ show(r); });
+  });
+
+  /* keynotes pairing */
+  var tags = document.querySelectorAll('.kn-tag'), items = document.querySelectorAll('#kn-legend li');
+  function kn(n, on){
+    tags.forEach(function(t){ t.classList.toggle('is-on', on && t.getAttribute('data-kn') === n); });
+    items.forEach(function(i){ i.classList.toggle('is-on', on && i.getAttribute('data-kn') === n); });
+  }
+  tags.forEach(function(t){
+    var n = t.getAttribute('data-kn');
+    t.addEventListener('pointerenter', function(){ kn(n, true); }); t.addEventListener('pointerleave', function(){ kn(n, false); });
+    t.addEventListener('focus', function(){ kn(n, true); }); t.addEventListener('blur', function(){ kn(n, false); });
+    t.addEventListener('click', function(){ kn(n, true); });
+  });
+  items.forEach(function(i){
+    var n = i.getAttribute('data-kn');
+    i.addEventListener('pointerenter', function(){ kn(n, true); }); i.addEventListener('pointerleave', function(){ kn(n, false); });
+  });
+
+  /* scope stack */
+  var stack = document.getElementById('stack'), slabs = Array.prototype.slice.call(stack.children), stackMode = 'all', stackSeen = false;
+  function paintStack(){
+    slabs.forEach(function(li){
+      var gima = stackMode === 'all' || li.getAttribute('data-ex') === 'gima';
+      li.classList.toggle('is-filled', stackSeen && gima);
+      li.querySelector('.st').textContent = gima ? 'GIMA' : 'By brand';
+    });
+  }
+  document.querySelectorAll('[data-stack]').forEach(function(b){
+    b.addEventListener('click', function(){
+      stackMode = b.getAttribute('data-stack'); stackSeen = true;
+      document.querySelectorAll('[data-stack]').forEach(function(x){ x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+      paintStack();
+    });
+  });
+  if ('IntersectionObserver' in window && window.gimaAnimate()) {
+    var so = new IntersectionObserver(function(es){ if (es[0].isIntersecting) { stackSeen = true; paintStack(); so.disconnect(); } }, {threshold:.4});
+    so.observe(stack);
+  } else { stackSeen = true; }
+  paintStack();
+
+  /* title block: current sheet; hidden over the cover and the footer */
+  var tb = document.getElementById('tb-sheet'), tbox = document.querySelector('.titleblock');
+  var offZones = new Map();
+  if ('IntersectionObserver' in window) {
+    var zo = new IntersectionObserver(function(es){
+      es.forEach(function(e){ offZones.set(e.target, e.isIntersecting); });
+      var off = false; offZones.forEach(function(v){ if (v) off = true; });
+      tbox.classList.toggle('is-off', off);
+    }, {threshold:0});
+    zo.observe(document.querySelector('.board')); zo.observe(document.querySelector('footer'));
+  } else { tbox.classList.remove('is-off'); }
+  if ('IntersectionObserver' in window) {
+    var to = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if (e.isIntersecting) tb.textContent = e.target.getAttribute('data-sheet'); });
+    }, {rootMargin:'-45% 0px -50% 0px'});
+    document.querySelectorAll('[data-sheet]').forEach(function(s){ to.observe(s); });
+  }
+
+  /* demo form */
+  document.getElementById('demo-form').addEventListener('submit', function(e){
+    e.preventDefault();
+    document.getElementById('form-ok').textContent = 'Example form: nothing was sent. On the live site a project director calls back within [1 working day].';
+  });
+
+  /* 3D: load on tap */
+  var a900 = document.getElementById('a900');
+  var loadBtn = a900.querySelector('[data-3d-load]');
+  var started = false;
+  function start(){
+    if (started) return; started = true;
+    loadBtn.textContent = 'Loading…'; loadBtn.disabled = true;
+    function go(){
+      loadBtn.remove();
+      var ok = window.initStore3D && window.initStore3D(a900, { animate: window.gimaAnimate() });
+      var poster = a900.querySelector('[data-3d-poster]');
+      if (ok && poster) poster.remove();
+    }
+    if (window.THREE) return go();
+    var s = document.createElement('script');
+    s.src = 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js';
+    s.onload = go;
+    s.onerror = function(){ loadBtn.remove(); a900.querySelector('[data-3d-fallback]').hidden = false; };
+    document.head.appendChild(s);
+  }
+  loadBtn.addEventListener('click', start);
+  a900.querySelectorAll('[data-step],[data-play],[data-explode]').forEach(function(b){
+    b.addEventListener('click', function(){ if (!started) start(); }, {capture:true});
+  });
+})();
+</script>
+
+<script>
+/* GIMA · Sheet A-900 placeholder: a store assembling in build order (three.js r128) */
+window.initStore3D = function(root, opts){
+  var stage = root.querySelector('[data-3d-canvas]');
+  var fallback = root.querySelector('[data-3d-fallback]');
+  var stepBtns = Array.prototype.slice.call(root.querySelectorAll('[data-step]'));
+  var explodeBtn = root.querySelector('[data-explode]');
+  var playBtn = root.querySelector('[data-play]');
+  var caption = root.querySelector('[data-3d-caption]');
+  var captionTitle = root.querySelector('[data-3d-title]');
+  var anim = function(){ return window.gimaAnimate ? window.gimaAnimate() : true; };
+  function fail(){ if (fallback) fallback.hidden = false; return false; }
+  if (!window.THREE) return fail();
+  var renderer;
+  try { renderer = new THREE.WebGLRenderer({ antialias: true, preserveDrawingBuffer: true }); } catch (e) { return fail(); }
+  if (!renderer || !renderer.getContext()) return fail();
+
+  var INK = 0x0b0b0b;
+  var LINE_FILL = new THREE.Color(0x151515), WHITE = new THREE.Color(0xffffff), RED = new THREE.Color(0xd72a27);
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, window.innerWidth < 720 ? 1.5 : 2));
+  renderer.setClearColor(INK, 1);
+  stage.insertBefore(renderer.domElement, stage.firstChild);
+  renderer.domElement.setAttribute('aria-hidden', 'true');
+
+  var scene = new THREE.Scene();
+  var cam = new THREE.OrthographicCamera(-10, 10, 10, -10, 0.1, 200);
+  cam.position.set(22, 12.5, 22); cam.lookAt(0, 1.8, 0);
+  var ambient = new THREE.AmbientLight(0xffffff, 1.0);
+  var key = new THREE.DirectionalLight(0xffffff, 0.0); key.position.set(8, 20, 12);
+  scene.add(ambient, key);
+  var world = new THREE.Group(); scene.add(world);
+
+  var W = 12, D = 8, H = 4.2;
+  var registry = [], curLayer = 0;
+  function mats(built, o){
+    o = o || {};
+    var m = {
+      fill: new THREE.MeshLambertMaterial({ color: LINE_FILL.clone(), transparent: true, opacity: 1 }),
+      line: new THREE.LineBasicMaterial({ color: 0xffffff, transparent: true, opacity: .6 }),
+      built: new THREE.Color(built), fo: o.fo == null ? 1 : o.fo, lineFo: o.lo == null ? 1 : o.lo, layer: curLayer, ghost: curLayer === 1 || curLayer === 2
+    };
+    registry.push(m); return m;
+  }
+  function box(g, m, w, h, d, x, y, z){
+    var geo = new THREE.BoxGeometry(w, h, d);
+    var mesh = new THREE.Mesh(geo, m.fill); mesh.position.set(x, y, z);
+    var e = new THREE.LineSegments(new THREE.EdgesGeometry(geo), m.line); e.position.copy(mesh.position);
+    g.add(mesh, e);
+  }
+  function tube(g, m, r, len, x, y, z){
+    var geo = new THREE.CylinderGeometry(r, r, len, 8);
+    var mesh = new THREE.Mesh(geo, m.fill); mesh.rotation.z = Math.PI / 2; mesh.position.set(x, y, z); g.add(mesh);
+    var e = new THREE.LineSegments(new THREE.EdgesGeometry(geo, 30), m.line); e.rotation.copy(mesh.rotation); e.position.copy(mesh.position); g.add(e);
+  }
+
+  var LAYERS = [
+    { name: 'Shell', text: 'The unit as the mall hands it over: slab, columns, bare block walls.', build: function(g){
+      var m = mats(0x6a6a6a);
+      box(g, m, W, .3, D, 0, -.15, 0); box(g, m, W, H, .25, 0, H/2, -D/2); box(g, m, .25, H, D, -W/2, H/2, 0);
+      box(g, m, .5, H, .5, 2.5, H/2, -D/2 + .4); box(g, m, .5, H, .5, -W/2 + .4, H/2, 1.2);
+    }},
+    { name: 'Infrastructure & MEP', text: 'Air-conditioning ducts, power, fire-fighting and data. The work shoppers never see, built by our own team.', build: function(g){
+      var m = mats(0x9aa0a6);
+      box(g, m, W - 1.2, .5, .9, .2, H - .45, -1.2); box(g, m, .7, .4, D - 2, 3.2, H - .5, .6); box(g, m, .7, .4, D - 2, -2.6, H - .5, .6);
+      var p = mats(0x8a8f94); tube(g, p, .06, W - 1.5, 0, H - .15, 2.2); tube(g, p, .06, W - 1.5, 0, H - .15, -2.8);
+      box(g, mats(0x3c3f44), .9, 1.6, .3, -W/2 + .9, 1.2, -D/2 + .3); box(g, m, W - 1.5, .08, .35, 0, H - .9, D/2 - 1.5);
+    }},
+    { name: 'Ceilings & partitions', text: 'Gypsum ceilings, bulkheads, lighting coves, fitting rooms and a stockroom.', build: function(g){
+      var m = mats(0xe6e3de, { fo: .96 });
+      box(g, m, W - .3, .12, D * .62, .1, H - 1.05, -D * .19); box(g, m, W - .3, .6, .35, .1, H - 1.3, D/2 - .3);
+      box(g, m, .12, H - 1.2, 2.6, W/2 - 3.2, (H - 1.2)/2, -D/2 + 1.4); box(g, m, 3.2, H - 1.2, .12, W/2 - 1.6, (H - 1.2)/2, -D/2 + 2.7);
+      box(g, m, .1, 2.4, 1.3, -W/2 + 1.5, 1.2, -D/2 + .8); box(g, m, .1, 2.4, 1.3, -W/2 + 2.8, 1.2, -D/2 + .8);
+    }},
+    { name: 'Finishes', text: 'Floors, wall cladding, paint, mirrors and the glass shopfront.', build: function(g){
+      box(g, mats(0xa39889), W - .3, .06, D - .3, .1, .03, .1);
+      box(g, mats(0x5a4636), W - 3.6, H - 1.3, .08, -1.6, (H - 1.3)/2 + .05, -D/2 + .17);
+      box(g, mats(0xefece6), .08, H - 1.3, D - 1.6, -W/2 + .17, (H - 1.3)/2 + .05, .6);
+      box(g, mats(0xa9bcc6, { fo: .1, lo: .7 }), W - .4, 2.6, .05, .1, 1.3, D/2 - .2);
+    }},
+    { name: 'Joinery & furniture', text: 'Shelving, display tables, the cash desk and seating, made to the store design.', build: function(g){
+      var wood = mats(0x7a5234), white = mats(0xf4f1ea);
+      for (var i = 0; i < 4; i++) {
+        var x = -W/2 + 1.6 + i * 1.75;
+        box(g, wood, .06, 2.6, .5, x - .8, 1.4, -D/2 + .5);
+        for (var s = 0; s < 4; s++) box(g, white, 1.6, .05, .45, x, .5 + s * .65, -D/2 + .5);
+      }
+      box(g, wood, .06, 2.6, .5, -W/2 + 1.6 + 4 * 1.75 - .8, 1.4, -D/2 + .5);
+      box(g, white, 2.2, .8, 1.1, -1.2, .4, .8); box(g, white, 1.6, .6, .9, 1.8, .3, 1.6);
+      box(g, wood, 2.6, 1.05, .7, W/2 - 2, .53, .1); box(g, mats(0xe8e0d0), 1.4, .45, .6, -3.8, .23, 2.3);
+    }},
+    { name: 'Lighting & opening day', text: 'Lights on, snag list closed, keys handed over on the promised date.', build: function(g){
+      var track = mats(0x1a1a1a), lamp = mats(0xfff3dc);
+      [-1.6, 1.4].forEach(function(z){
+        box(g, track, W - 2, .06, .08, .2, H - 1.12, z);
+        for (var i = 0; i < 6; i++) box(g, lamp, .16, .22, .16, -W/2 + 1.8 + i * 1.8, H - 1.26, z);
+      });
+      box(g, mats(0xd72a27), 3.2, .5, .12, 0, H - 1.3, D/2 - .1);
+      var w1 = new THREE.PointLight(0xfff0dc, 0, 16, 2); w1.position.set(-2.4, H - 1.6, 0);
+      var w2 = new THREE.PointLight(0xfff0dc, 0, 16, 2); w2.position.set(3, H - 1.6, .5);
+      g.add(w1, w2); g.userData.lights = [w1, w2];
+    }}
+  ];
+
+  var groups = LAYERS.map(function(L, i){
+    curLayer = i; var g = new THREE.Group(); L.build(g);
+    g.userData.t = 1; g.userData.target = 1; world.add(g); return g;
+  });
+
+  // red bounding box around the unit
+  var bbGeo = new THREE.BoxGeometry(W + .2, H + .5, D + .2);
+  var bbMat = new THREE.LineBasicMaterial({ color: 0xd72a27, transparent: true, opacity: .9 });
+  var bb = new THREE.LineSegments(new THREE.EdgesGeometry(bbGeo), bbMat); bb.position.set(0, (H + .5)/2 - .3, 0); world.add(bb);
+
+  var LAST = LAYERS.length;
+  var st = { step: LAST, active: LAST - 1, builtT: 1, builtTarget: 1, exploded: false, explodeT: 0, rotY: -.25, drag: null };
+  var GAP = 1.6;
+  function ease(t){ return t < .5 ? 4*t*t*t : 1 - Math.pow(-2*t + 2, 3) / 2; }
+
+  function paint(){
+    var b = ease(st.builtT);
+    var tmp = new THREE.Color();
+    registry.forEach(function(m){
+      var a = ease(Math.max(0, Math.min(1, groups[m.layer].userData.t)));
+      var act = (m.layer === st.active && st.step < LAST) ? 1 : 0;
+      m.fill.color.copy(LINE_FILL).lerp(m.built, b);
+      var gh = m.ghost ? b : 0;
+      m.fill.opacity = a * m.fo * (1 - .86 * gh);
+      m.fill.depthWrite = gh < .5;
+      tmp.copy(WHITE).lerp(RED, act);
+      m.line.color.copy(tmp);
+      m.line.opacity = a * m.lineFo * (act ? 1 : (.82 - (m.ghost ? .6 : .64) * b));
+    });
+    groups[LAST - 1].userData.lights.forEach(function(l){ l.intensity = 1.0 * b * ease(groups[LAST - 1].userData.t); });
+    ambient.intensity = 1 - .4 * b; key.intensity = .5 * b;
+    bbMat.opacity = .9 * (1 - ease(st.explodeT));
+  }
+
+  function applyStep(n, instant){
+    st.step = n; st.active = n - 1;
+    st.builtTarget = n === LAST ? 1 : 0;
+    groups.forEach(function(g, i){ g.userData.target = i < n ? 1 : 0; if (instant || !anim()) g.userData.t = g.userData.target; });
+    if (instant || !anim()) st.builtT = st.builtTarget;
+    stepBtns.forEach(function(b){
+      var k = +b.getAttribute('data-step');
+      b.setAttribute('aria-pressed', k === n ? 'true' : 'false'); b.classList.toggle('is-done', k < n);
+    });
+    captionTitle.textContent = LAYERS[n - 1].name; caption.textContent = LAYERS[n - 1].text;
+    kick();
+  }
+
+  function resize(){
+    var r = stage.getBoundingClientRect(), w = Math.max(1, r.width), h = Math.max(1, r.height);
+    renderer.setSize(w, h, false);
+    var aspect = w / h;
+    var size = (aspect < 1 ? 10.5 / aspect : 7.4) * (1 + ease(st.explodeT) * .42);
+    cam.left = -size * aspect; cam.right = size * aspect; cam.top = size; cam.bottom = -size; cam.updateProjectionMatrix();
+  }
+
+  var el = renderer.domElement; el.style.touchAction = 'pan-y';
+  el.addEventListener('pointerdown', function(e){ st.drag = { x: e.clientX, r: st.rotY }; try { el.setPointerCapture(e.pointerId); } catch (x) {} root.classList.add('is-dragging'); kick(); });
+  el.addEventListener('pointermove', function(e){ if (!st.drag) return; st.rotY = st.drag.r + (e.clientX - st.drag.x) * .008; kick(); });
+  function end(){ st.drag = null; root.classList.remove('is-dragging'); }
+  el.addEventListener('pointerup', end); el.addEventListener('pointercancel', end);
+
+  var playTimer = null;
+  function stopPlay(){ if (playTimer) { clearInterval(playTimer); playTimer = null; } if (playBtn) playBtn.textContent = 'Play the build'; }
+  function play(){
+    stopPlay(); if (playBtn) playBtn.textContent = 'Stop';
+    var n = 1; applyStep(n, false);
+    playTimer = setInterval(function(){ n++; if (n > LAST) return stopPlay(); applyStep(n); }, anim() ? 1250 : 1800);
+  }
+  stepBtns.forEach(function(b){ b.addEventListener('click', function(){ stopPlay(); applyStep(+b.getAttribute('data-step')); }); });
+  if (playBtn) playBtn.addEventListener('click', function(){ if (playTimer) stopPlay(); else play(); });
+  if (explodeBtn) explodeBtn.addEventListener('click', function(){
+    st.exploded = !st.exploded;
+    explodeBtn.setAttribute('aria-pressed', st.exploded ? 'true' : 'false');
+    explodeBtn.textContent = st.exploded ? 'Assemble' : 'Explode layers';
+    if (!anim()) { st.explodeT = st.exploded ? 1 : 0; resize(); }
+    kick();
+  });
+
+  var running = false, visible = true, last = 0;
+  function kick(){ if (!running && visible) { running = true; last = performance.now(); requestAnimationFrame(tick); } }
+  function approach(v, target, rate){ if (v === target) return v; var nv = v + Math.sign(target - v) * rate; return Math.abs(nv - target) < rate ? target : nv; }
+  function tick(now){
+    var dt = Math.min(.05, (now - last) / 1000); last = now;
+    var moving = false, et = st.exploded ? 1 : 0;
+    if (st.explodeT !== et) { st.explodeT = approach(st.explodeT, et, dt * 1.4); moving = true; }
+    if (st.builtT !== st.builtTarget) { st.builtT = approach(st.builtT, st.builtTarget, dt * 1.6); moving = true; }
+    groups.forEach(function(g, i){
+      var u = g.userData;
+      if (u.t !== u.target) { u.t = approach(u.t, u.target, dt * 2.2); moving = true; }
+      var k = ease(Math.max(0, Math.min(1, u.t)));
+      g.visible = k > .001;
+      g.position.y = (1 - k) * 6 + ease(st.explodeT) * i * GAP;
+    });
+    resize(); paint();
+    world.rotation.y = st.rotY;
+    world.position.y = -ease(st.explodeT) * Math.max(0, st.step - 1) * GAP * .45;
+    renderer.render(scene, cam);
+    if ((moving || st.drag) && visible) requestAnimationFrame(tick); else running = false;
+  }
+  if ('ResizeObserver' in window) new ResizeObserver(function(){ kick(); }).observe(stage); else window.addEventListener('resize', kick);
+  if ('IntersectionObserver' in window) new IntersectionObserver(function(es){ visible = es[0].isIntersecting; if (visible) kick(); }).observe(stage);
+  document.addEventListener('visibilitychange', function(){ if (!document.hidden) kick(); });
+
+  applyStep(LAST, true);
+  if (anim()) play();
+  root.__store3d = { applyStep: applyStep };
+  return true;
+};
+</script>
