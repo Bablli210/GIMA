@@ -5,6 +5,7 @@
     node render.js                       full film → gima-website-direction.mp4
     node render.js --stills 3,12.5,40    single frames → stills/t-<sec>.jpg
     node render.js --from 20 --to 30     part of the film (for checking)
+    node render.js --audio score.wav     full film with the soundtrack (python3 score.py writes score.wav)
 
   Needs Playwright (with Chromium) and ffmpeg. Set FFMPEG=/path/to/ffmpeg if it is not on PATH.
   Set LOCAL_ASSETS=/dir to serve Google Fonts and three.js from local copies when offline:
@@ -26,6 +27,7 @@ const FPS = +opt('fps', 30);
 const OUT = path.resolve(__dirname, opt('out', 'gima-website-direction.mp4'));
 const LOCAL = process.env.LOCAL_ASSETS;
 const FFMPEG = process.env.FFMPEG || 'ffmpeg';
+const AUDIO = opt('audio') && path.resolve(opt('audio'));
 
 const TYPES = { '.html': 'text/html; charset=utf-8', '.js': 'application/javascript', '.jpg': 'image/jpeg', '.png': 'image/png', '.css': 'text/css' };
 const server = http.createServer((req, res) => {
@@ -68,7 +70,8 @@ const server = http.createServer((req, res) => {
   } else {
     const from = +opt('from', 0), to = +opt('to', DUR);
     const n0 = Math.round(from * FPS), n1 = Math.round(to * FPS);
-    const ff = spawn(FFMPEG, ['-y', '-f', 'image2pipe', '-framerate', String(FPS), '-c:v', 'mjpeg', '-i', '-',
+    const audio = AUDIO ? ['-ss', String(from), '-t', String(to - from), '-i', AUDIO, '-map', '0:v', '-map', '1:a', '-c:a', 'aac', '-b:a', '256k'] : [];
+    const ff = spawn(FFMPEG, ['-y', '-f', 'image2pipe', '-framerate', String(FPS), '-c:v', 'mjpeg', '-i', '-', ...audio,
       '-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-crf', '17', '-preset', 'slow', '-profile:v', 'high', '-movflags', '+faststart', OUT], { stdio: ['pipe', 'inherit', 'inherit'] });
     const t0 = Date.now();
     for (let n = n0; n < n1; n++) {
