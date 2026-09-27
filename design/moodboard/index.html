@@ -59,7 +59,7 @@ header.wrap{display:block}
 .seg{display:inline-flex;border:1px solid var(--line)}
 .seg button{background:none;border:0;padding:0 12px;min-height:36px;font-family:var(--f-util);font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--dim);cursor:pointer}
 .seg button[aria-pressed="true"]{background:var(--white);color:var(--black)}
-@media (pointer:coarse){.seg button{min-height:44px}}
+@media (pointer:coarse){.seg button{min-height:44px}.textlink,.index a{min-height:44px;display:inline-flex;align-items:center}}
 
 /* ---------- plates, ticks ---------- */
 .plate{position:relative;aspect-ratio:3/2;background:var(--graphite);max-width:100%}
@@ -369,6 +369,7 @@ table{border-collapse:collapse;width:100%}
 .steps button.is-done{color:var(--white)}
 .steps button[aria-pressed="true"]{background:var(--white);color:var(--black);border-color:var(--white)}
 .steps button[aria-pressed="true"] b{color:var(--red)}
+.a900-ctl .btn[aria-pressed="true"]{background:var(--white);color:var(--black)}
 .a900-caption{margin-top:14px;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--gap);min-height:3.2em}
 .a900-caption h3{grid-column:1/span 3}
 .a900-caption p{grid-column:4/span 9}
@@ -409,14 +410,14 @@ table{border-collapse:collapse;width:100%}
 /* MB-12 interface */
 .ui-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--gap)}
 .ui-cell{grid-column:span 4;background:var(--graphite);padding:24px;display:grid;gap:18px;align-content:space-between;min-height:220px}
-.ui-cell .demo{display:flex;flex-wrap:wrap;gap:16px;align-items:center;min-height:64px}
+.ui-cell>.demo{display:flex;flex-wrap:wrap;gap:16px;align-items:center;min-height:64px}
 .ui-cell p{font-size:14px;color:var(--dim)}
 .ui-cell.wide{grid-column:span 8}
 @media (max-width:1023px){.ui-cell{grid-column:span 6}.ui-cell.wide{grid-column:1/-1}}
 @media (max-width:599px){.ui-cell{grid-column:1/-1;min-height:0}}
 .focus-demo{outline:2px solid var(--red);outline-offset:3px}
 .title-block-demo{width:288px;max-width:100%;height:56px;background:var(--black);box-shadow:inset 0 0 0 1px var(--line);display:grid;grid-template-columns:1fr auto;align-items:center;padding:0 12px;gap:8px;position:relative}
-.light-sheet{grid-column:1/-1;background:var(--white);color:var(--black);padding:clamp(20px,3vw,40px);display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px var(--gap)}
+.light-sheet{grid-column:1/-1;background:var(--white);color:var(--black);color-scheme:light;padding:clamp(20px,3vw,40px);display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px var(--gap)}
 .light-sheet .ls-head{grid-column:1/span 4;display:grid;gap:14px;align-content:start}
 .light-sheet .ls-head .label{color:var(--sheet-grey)}
 .light-sheet h3.big{font-family:var(--f-display);font-stretch:62%;font-weight:800;font-size:clamp(40px,4.4vw,64px);line-height:.9}
@@ -429,6 +430,7 @@ table{border-collapse:collapse;width:100%}
 .light-sheet input:focus-visible,.light-sheet select:focus-visible{outline:2px solid var(--red);outline-offset:2px}
 .light-sheet .form-end{grid-column:1/-1;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
 .light-sheet .btn.primary{color:var(--white)}
+.light-sheet .btn .c{background:var(--black)}
 .light-sheet .btn.primary:focus-visible{outline:2px solid var(--black);outline-offset:2px;box-shadow:none}
 .light-sheet .ok{font-size:14px;color:var(--black)}
 @media (max-width:899px){.light-sheet .ls-head,.light-sheet form{grid-column:1/-1}}
@@ -589,7 +591,7 @@ footer{margin-top:clamp(72px,9vw,120px);padding-block:0 96px}
     <div class="b-cell">
       <div class="b-panel" style="aspect-ratio:1/1">
         <span class="label">Colour · rule of one</span>
-        <div class="mini-slabs" aria-label="Brand colours: Legacy Black #0B0B0B, White #FFFFFF, Sunset Red #D72A27">
+        <div class="mini-slabs" role="img" aria-label="Brand colours: Legacy Black #0B0B0B, White #FFFFFF, Sunset Red #D72A27">
           <div>#0B0B0B</div><div>#FFFFFF</div><div>#D72A27</div>
         </div>
       </div>
@@ -633,39 +635,39 @@ footer{margin-top:clamp(72px,9vw,120px);padding-block:0 96px}
     <p class="label lead-red">MB-01 · Direction</p>
     <div class="sh-main">
       <h2>Four directions, one recommendation</h2>
-      <p>We developed four directions and had each one reviewed twice: once as a head of store development choosing a fit-out contractor would read it, and once for craft, brand fit, speed and accessibility. Scores are out of 50 (five criteria, ten points each). The recommended direction keeps the best ideas from the other three.</p>
+      <p>We developed four directions and reviewed each one twice internally: once from the point of view of a head of store development choosing a fit-out contractor, and once for craft, brand fit, speed and accessibility. Scores are out of 50 (five criteria, ten points each). The recommended direction keeps the best ideas from the other three.</p>
     </div>
   </div>
   <div class="tbl-wrap">
     <table class="dir-tbl">
-      <thead><tr><th scope="col">Direction</th><th scope="col">The idea</th><th scope="col">Buyer's review</th><th scope="col">Craft review</th><th scope="col">What we kept from it</th></tr></thead>
+      <thead><tr><th scope="col">Direction</th><th scope="col">The idea</th><th scope="col">Buyer's lens</th><th scope="col">Craft lens</th><th scope="col">What we kept from it</th></tr></thead>
       <tbody>
         <tr class="is-lead">
           <td><span class="dname">Drawn, then built</span><br><span class="lead-tag">Recommended</span></td>
           <td>The site as GIMA's drawing set. Each flagship is shown once as design becoming build, then every claim is filed as a fact.</td>
-          <td class="score" data-label="Buyer's review">38 / 50<span class="bar"><i style="width:76%"></i></span></td>
-          <td class="score" data-label="Craft review">39 / 50<span class="bar"><i style="width:78%"></i></span></td>
+          <td class="score" data-label="Buyer's lens">38 / 50<span class="bar"><i style="width:76%"></i></span></td>
+          <td class="score" data-label="Craft lens">39 / 50<span class="bar"><i style="width:78%"></i></span></td>
           <td data-label="What we kept">The lead story: traced drawings, project sheets, keynotes, the 3D assembly.</td>
         </tr>
         <tr>
           <td><span class="dname">The red box</span></td>
           <td>The 3:2 red logo block becomes the only frame on the work. It opens, scales and cuts to frame every project.</td>
-          <td class="score" data-label="Buyer's review">38 / 50<span class="bar"><i style="width:76%"></i></span></td>
-          <td class="score" data-label="Craft review">38 / 50<span class="bar"><i style="width:76%"></i></span></td>
+          <td class="score" data-label="Buyer's lens">38 / 50<span class="bar"><i style="width:76%"></i></span></td>
+          <td class="score" data-label="Craft lens">38 / 50<span class="bar"><i style="width:76%"></i></span></td>
           <td data-label="What we kept">The rule of one, the 3:2 module, the scope slabs. Its cursor keyhole was dropped: it has no touch equivalent.</td>
         </tr>
         <tr>
           <td><span class="dname">The ledger</span></td>
-          <td>Forty-five years entered line by line, as a sortable public record.</td>
-          <td class="score" data-label="Buyer's review">32 / 50<span class="bar"><i style="width:64%"></i></span></td>
-          <td class="score" data-label="Craft review">33 / 50<span class="bar"><i style="width:66%"></i></span></td>
+          <td>Every project since 1980, entered line by line, as a sortable public record.</td>
+          <td class="score" data-label="Buyer's lens">32 / 50<span class="bar"><i style="width:64%"></i></span></td>
+          <td class="score" data-label="Craft lens">33 / 50<span class="bar"><i style="width:66%"></i></span></td>
           <td data-label="What we kept">Group by brand, the empty-data rule, the printable record. On its own it reads like a spreadsheet.</td>
         </tr>
         <tr>
           <td><span class="dname">Lights on</span></td>
           <td>A mall after hours. The visitor switches each shopfront on, ending with the shutter going up on opening day.</td>
-          <td class="score" data-label="Buyer's review">31 / 50<span class="bar"><i style="width:62%"></i></span></td>
-          <td class="score" data-label="Craft review">31 / 50<span class="bar"><i style="width:62%"></i></span></td>
+          <td class="score" data-label="Buyer's lens">31 / 50<span class="bar"><i style="width:62%"></i></span></td>
+          <td class="score" data-label="Craft lens">31 / 50<span class="bar"><i style="width:62%"></i></span></td>
           <td data-label="What we kept">"Tell us your opening date" as the enquiry, and the shell-to-opening comparison. It keeps the work too dark.</td>
         </tr>
       </tbody>
@@ -690,7 +692,7 @@ footer{margin-top:clamp(72px,9vw,120px);padding-block:0 96px}
     <li><h3>Say what we didn't do</h3><p>Each project lists who did what: "Concept: brand's global design", "Signage: by others". A contractor who is honest about scope is believed about the rest.</p></li>
     <li><h3>Empty is hidden, never faked</h3><p>No placeholder, dash or estimate ships. A field appears only when its data is verified. Twelve true projects beat forty half-empty rows.</p></li>
     <li><h3>Plain words, precise marks</h3><p>Navigation and headings use plain words: Work, Services, Process, About, Contact. The drafting language lives in the small marks. Numbers never count up.</p></li>
-    <li><h3>Fast on a mid-range phone</h3><p>Most buyers will first open the link on an Android phone. The largest image loads in under 2.5 seconds on 4G. Nothing hijacks scrolling. 3D loads only when asked for.</p></li>
+    <li><h3>Fast on a mid-range phone</h3><p>Many buyers will first open the link on a phone, often a mid-range Android. The largest image loads in under 2.5 seconds on 4G. Nothing hijacks scrolling. 3D loads only when asked for.</p></li>
   </ul>
 </section>
 
@@ -700,7 +702,7 @@ footer{margin-top:clamp(72px,9vw,120px);padding-block:0 96px}
     <p class="label lead-red">MB-03 · Colour</p>
     <div class="sh-main">
       <h2>Black ground, white work, one red</h2>
-      <p>The three brand colours stay exactly as the guideline sets them. We add four greys for panels, hairlines and small text, all checked for contrast. The slabs below use the guideline's own stacked-swatch shape.</p>
+      <p>Black and white stay exactly as the guideline sets them, and the red follows the logo files (see below). We add four greys for panels, hairlines and small text, all checked for contrast. The slabs below use the guideline's own stacked-swatch shape.</p>
     </div>
   </div>
   <div class="colour">
@@ -733,7 +735,7 @@ footer{margin-top:clamp(72px,9vw,120px);padding-block:0 96px}
       </div>
       <div class="txt">
         <h3>Which red is GIMA red?</h3>
-        <p>The guideline states Sunset Red as #C63C32, but the logo artwork and every sample in the guideline render as #D72A27. We use #D72A27 so the website matches the logo, signage and print clients already see. Please confirm with your sign-maker and send the Pantone reference. If #C63C32 is correct, we change one value and every rule still holds.</p>
+        <p>The guideline states Sunset Red as #C63C32, but the logo artwork and every sample in the guideline render as #D72A27. We use #D72A27 so the website matches the logo files as supplied. Please check it against your signage and print with your sign-maker, and send the Pantone reference. If #C63C32 is correct, we change one value and every rule still holds.</p>
         <p class="body-dim">Red on black is 4.0:1, so on black it is used for lines, marks and display type of 24px and up, never for small text.</p>
       </div>
     </div>
@@ -769,7 +771,7 @@ footer{margin-top:clamp(72px,9vw,120px);padding-block:0 96px}
       <div class="sp-meta"><b>Figures and labels</b><span class="label">IBM Plex Sans · 500 · tabular figures</span><span class="label">Anything measured: m², years, weeks, sheet numbers</span></div>
       <div class="sp-body sp-util">
         <span>P-01 · [Operator] for [Brand] · [Mall], [City] · [000] m² · [Year]</span>
-        <span class="big">Since 1980 <i>·</i> 11 m² <i>to</i> 3,000 m² <i>·</i> 100+ <i>years combined team experience</i></span>
+        <span class="big">Since 1980 <i>·</i> 11 m² <i>to</i> 3,000+ m² <i>·</i> 100+ <i>years combined team experience</i></span>
       </div>
     </li>
     <li>
@@ -830,7 +832,7 @@ footer{margin-top:clamp(72px,9vw,120px);padding-block:0 96px}
     <p class="label lead-red">MB-06 · Drawing marks</p>
     <div class="sh-main">
       <h2>A small kit taken from the guideline</h2>
-      <p>Every mark already exists in GIMA's guideline or in its working drawings. Each has one job and a fixed place, so the site feels drafted without dressing up as a blueprint.</p>
+      <p>Every mark comes from GIMA's guideline or from standard architectural drafting. Each has one job and a fixed place, so the site feels drafted without dressing up as a blueprint.</p>
     </div>
   </div>
   <ul class="marks">
@@ -847,7 +849,7 @@ footer{margin-top:clamp(72px,9vw,120px);padding-block:0 96px}
         <rect x="40" y="25" width="160" height="100" fill="#0B0B0B" stroke="#2B2B2B"/>
         <g stroke="#fff" stroke-width="1.5"><line x1="32" y1="33" x2="48" y2="17"/><line x1="192" y1="33" x2="208" y2="17"/><line x1="32" y1="133" x2="48" y2="117"/><line x1="192" y1="133" x2="208" y2="117"/></g>
       </svg></div>
-      <h3>45° registration ticks</h3><p>Mark the corners of the hero photo, the index preview, the title block and the 3D stage. Nowhere else.</p>
+      <h3>45° registration ticks</h3><p>Mark the corners of the hero photo, the index preview, the title block and the 3D stage, and appear on buttons on hover and focus. Nowhere else.</p>
     </li>
     <li>
       <div class="mk"><svg viewBox="0 0 240 150" aria-hidden="true">
@@ -855,7 +857,7 @@ footer{margin-top:clamp(72px,9vw,120px);padding-block:0 96px}
         <polygon points="20,20 138,20 108,130 20,130" fill="#9A9A9A"/>
         <line x1="138" y1="20" x2="108" y2="130" stroke="#D72A27" stroke-width="2"/>
       </svg></div>
-      <h3>The 75° cut</h3><p>The angle of the guideline cover. The only diagonal on the site: image wipes, slab ends and the comparison divider.</p>
+      <h3>The 75° cut</h3><p>The angle of the guideline cover. The only diagonal cut on the site: image wipes, slab ends and the comparison divider.</p>
     </li>
     <li>
       <div class="mk"><svg viewBox="0 0 240 150" aria-hidden="true">
@@ -892,7 +894,7 @@ footer{margin-top:clamp(72px,9vw,120px);padding-block:0 96px}
     <p class="label lead-red">MB-07 · Portfolio index</p>
     <div class="sh-main">
       <h2>The register: every project, filed</h2>
-      <p>The portfolio is one list that reads three ways. On desktop, a table on black with a large colour preview that follows the row you point at. On phones, image-first cards. Once enough projects have verified areas, a same-scale plan view shows every footprint at true size. Filters dim entries rather than remove them, so the volume of work stays visible.</p>
+      <p>The portfolio is one list that reads three ways. On desktop, a table on black with a large colour preview that follows the row you point at. On phones, image-first cards. Once enough projects have verified areas, a same-scale plan view shows every footprint at the same scale. Filters dim entries rather than remove them, so the volume of work stays visible.</p>
     </div>
   </div>
   <div class="register" id="register">
@@ -909,64 +911,65 @@ footer{margin-top:clamp(72px,9vw,120px);padding-block:0 96px}
               <td class="num">P-01</td>
               <td><button type="button" class="row-btn"><span class="bn">Azzaro</span><span class="cl">[Operator] for Azzaro</span><span class="mo">Menswear · [Mall], [City]</span></button></td>
               <td class="hide-s">Retail · Menswear</td><td class="hide-s ph">[Mall], [City]</td><td class="r num hide-s ph">[000]</td>
-              <td class="hide-s"><span class="scope-cells" aria-label="Example scope: concept by brand; shop drawings, infrastructure, finishing, joinery by GIMA"><i></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i></span></td>
+              <td class="hide-s"><span class="scope-cells" role="img" aria-label="Example scope: concept by brand; shop drawings, infrastructure, finishing, joinery by GIMA"><i></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i></span></td>
               <td class="r num ph">[Year]</td>
             </tr>
             <tr data-img="assets/graded/charles-keith-hero-true.jpg" data-pos="50% 50%" data-alt="Charles &amp; Keith store">
               <td class="num">P-02</td>
               <td><button type="button" class="row-btn"><span class="bn">Charles &amp; Keith</span><span class="cl">[Operator] for Charles &amp; Keith</span><span class="mo">Footwear, bags · [Mall], [City]</span></button></td>
               <td class="hide-s">Retail · Footwear, bags</td><td class="hide-s ph">[Mall], [City]</td><td class="r num hide-s ph">[000]</td>
-              <td class="hide-s"><span class="scope-cells" aria-label="Example scope: concept by brand; the rest by GIMA"><i></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i></span></td>
+              <td class="hide-s"><span class="scope-cells" role="img" aria-label="Example scope: concept by brand; the rest by GIMA"><i></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i></span></td>
               <td class="r num ph">[Year]</td>
             </tr>
             <tr data-img="assets/graded/leather-goods-lounge-true.jpg" data-pos="50% 50%" data-alt="Leather goods store with lounge seating">
               <td class="num">P-03</td>
               <td><button type="button" class="row-btn"><span class="bn">[Brand]</span><span class="cl">[Client]</span><span class="mo">Leather goods · [Mall], [City]</span></button></td>
               <td class="hide-s">Retail · Leather goods</td><td class="hide-s ph">[Mall], [City]</td><td class="r num hide-s ph">[000]</td>
-              <td class="hide-s"><span class="scope-cells" aria-label="Example scope: all five by GIMA"><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i></span></td>
+              <td class="hide-s"><span class="scope-cells" role="img" aria-label="Example scope: all five by GIMA"><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i></span></td>
               <td class="r num ph">[Year]</td>
             </tr>
             <tr data-img="assets/graded/shoe-wall-true.jpg" data-pos="50% 50%" data-alt="Shoe store with backlit glass shelves">
               <td class="num">P-04</td>
               <td><button type="button" class="row-btn"><span class="bn">[Brand]</span><span class="cl">[Client]</span><span class="mo">Footwear · [Mall], [City]</span></button></td>
               <td class="hide-s">Retail · Footwear</td><td class="hide-s ph">[Mall], [City]</td><td class="r num hide-s ph">[000]</td>
-              <td class="hide-s"><span class="scope-cells" aria-label="Example scope: all five by GIMA"><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i></span></td>
+              <td class="hide-s"><span class="scope-cells" role="img" aria-label="Example scope: all five by GIMA"><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i></span></td>
               <td class="r num ph">[Year]</td>
             </tr>
             <tr data-img="assets/graded/shirt-wall-true.jpg" data-pos="45% 50%" data-alt="Menswear store with a shirt wall">
               <td class="num">P-05</td>
               <td><button type="button" class="row-btn"><span class="bn">[Brand]</span><span class="cl">[Client]</span><span class="mo">Menswear · [Mall], [City]</span></button></td>
               <td class="hide-s">Retail · Menswear</td><td class="hide-s ph">[Mall], [City]</td><td class="r num hide-s ph">[000]</td>
-              <td class="hide-s"><span class="scope-cells" aria-label="Example scope: concept and shop drawings by brand; the rest by GIMA"><i></i><i></i><i class="g"></i><i class="g"></i><i class="g"></i></span></td>
+              <td class="hide-s"><span class="scope-cells" role="img" aria-label="Example scope: concept and shop drawings by brand; the rest by GIMA"><i></i><i></i><i class="g"></i><i class="g"></i><i class="g"></i></span></td>
               <td class="r num ph">[Year]</td>
             </tr>
             <tr data-img="assets/graded/menswear-wood-true.jpg" data-pos="50% 50%" data-alt="Menswear store with timber joinery">
               <td class="num">P-06</td>
               <td><button type="button" class="row-btn"><span class="bn">[Brand]</span><span class="cl">[Client]</span><span class="mo">Menswear · [Mall], [City]</span></button></td>
               <td class="hide-s">Retail · Menswear</td><td class="hide-s ph">[Mall], [City]</td><td class="r num hide-s ph">[000]</td>
-              <td class="hide-s"><span class="scope-cells" aria-label="Example scope: all five by GIMA"><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i></span></td>
+              <td class="hide-s"><span class="scope-cells" role="img" aria-label="Example scope: all five by GIMA"><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i></span></td>
               <td class="r num ph">[Year]</td>
             </tr>
             <tr data-img="assets/graded/accessories-display-true.jpg" data-pos="50% 50%" data-alt="Accessories display">
               <td class="num">P-07</td>
               <td><button type="button" class="row-btn"><span class="bn">[Brand]</span><span class="cl">[Client]</span><span class="mo">Accessories · [Mall], [City]</span></button></td>
               <td class="hide-s">Retail · Accessories</td><td class="hide-s ph">[Mall], [City]</td><td class="r num hide-s ph">[000]</td>
-              <td class="hide-s"><span class="scope-cells" aria-label="Example scope: joinery and finishing by GIMA only"><i></i><i></i><i></i><i class="g"></i><i class="g"></i></span></td>
+              <td class="hide-s"><span class="scope-cells" role="img" aria-label="Example scope: joinery and finishing by GIMA only"><i></i><i></i><i></i><i class="g"></i><i class="g"></i></span></td>
               <td class="r num ph">[Year]</td>
             </tr>
             <tr data-img="assets/graded/menswear-floor-true.jpg" data-pos="50% 50%" data-alt="Large fashion floor">
               <td class="num">P-08</td>
               <td><button type="button" class="row-btn"><span class="bn">[Brand]</span><span class="cl">[Client]</span><span class="mo">Fashion · [Mall], [City]</span></button></td>
               <td class="hide-s">Retail · Fashion</td><td class="hide-s ph">[Mall], [City]</td><td class="r num hide-s ph">[000]</td>
-              <td class="hide-s"><span class="scope-cells" aria-label="Example scope: all five by GIMA"><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i></span></td>
+              <td class="hide-s"><span class="scope-cells" role="img" aria-label="Example scope: all five by GIMA"><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i></span></td>
               <td class="r num ph">[Year]</td>
             </tr>
           </tbody>
         </table>
       </div>
+      <p class="label" style="margin-top:14px;color:var(--white)">Example register. Scope cells, malls, areas and years are illustrative until GIMA confirms them.</p>
       <div class="reg-legend label">
         <span>Scope, in order:</span><span>Concept · Shop drawings · Infrastructure &amp; MEP · Finishing · Joinery &amp; furniture</span>
-        <span><span class="scope-cells"><i class="g"></i></span> GIMA</span><span><span class="scope-cells"><i></i></span> By brand or others</span>
+        <span><span class="scope-cells" aria-hidden="true"><i class="g"></i></span> GIMA</span><span><span class="scope-cells" aria-hidden="true"><i></i></span> By brand or others</span>
       </div>
     </div>
     <div class="reg-side">
@@ -979,21 +982,22 @@ footer{margin-top:clamp(72px,9vw,120px);padding-block:0 96px}
   <div class="reg-extras">
     <div>
       <h3>Group by brand</h3>
-      <p>Repeat clients fold into one line, "Charles &amp; Keith × [N] stores", which opens into each unit. For a brand planning a rollout, repeat business is the first proof they look for.</p>
+      <p>Repeat clients fold into one line, "[Brand] × [N] stores", which opens into each unit. For a brand planning a rollout, repeat business is the first proof they look for.</p>
     </div>
     <div class="same-scale">
       <h3>Same-scale plan</h3>
       <p>Every footprint drawn at one true scale. Here, the two ends of GIMA's documented range:</p>
-      <svg viewBox="0 0 320 150" role="img" aria-label="An 11 square metre square beside a 3,000 square metre rectangle, drawn at the same scale">
-        <rect x="1" y="1" width="250" height="100" fill="none" stroke="#fff" stroke-width="1"/>
-        <text x="126" y="56" fill="#9A9A9A" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12">3,000 m² (60 × 50 m)</text>
-        <rect x="276" y="85" width="16.6" height="16.6" fill="#D72A27"/>
-        <text x="266" y="124" fill="#fff" font-family="IBM Plex Sans, sans-serif" font-size="12">11 m²</text>
+      <svg viewBox="0 0 240 132" role="img" aria-label="An 11 square metre square beside a 3,000 square metre rectangle of 60 by 50 metres, both drawn at 2.5 units per metre">
+        <rect x="1" y="1" width="150" height="125" fill="none" stroke="#fff" stroke-width="1"/>
+        <text x="76" y="62" fill="#9A9A9A" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="11">3,000 m²</text>
+        <text x="76" y="77" fill="#9A9A9A" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="11">60 × 50 m</text>
+        <rect x="170" y="117.7" width="8.3" height="8.3" fill="#D72A27"/>
+        <text x="184" y="126" fill="#fff" font-family="IBM Plex Sans, sans-serif" font-size="11">11 m²</text>
       </svg>
     </div>
     <div>
       <h3>Rules for the data</h3>
-      <p>Columns with no verified values are hidden. Years are always shown. A map of Egypt comes later, only with verified locations and the official outline approved.</p>
+      <p>Columns with no verified values are hidden. A project is listed once its year is confirmed, so every entry shows one. A map of Egypt comes later, only with verified locations and the official outline approved.</p>
     </div>
   </div>
 </section>
@@ -1121,7 +1125,7 @@ footer{margin-top:clamp(72px,9vw,120px);padding-block:0 96px}
         <img class="poster" src="assets/assembly-poster.jpg" alt="Line drawing of a placeholder store unit assembled in six layers" data-3d-poster>
         <span class="ph-tag">[Placeholder model · real project model to follow]</span>
         <button type="button" class="btn primary load" data-3d-load>Load the 3D model<span class="c a"></span><span class="c b"></span></button>
-        <p class="fallback" data-3d-fallback hidden>This browser can't show the 3D view. The six steps below still describe each layer.</p>
+        <p class="fallback" data-3d-fallback hidden>This browser can't show the 3D view. In build order, the layers are shell, infrastructure, ceilings, finishes, joinery, and lighting for opening day.</p>
       </div>
       <div class="a900-ctl">
         <ul class="steps" aria-label="Build stages">
@@ -1153,7 +1157,7 @@ footer{margin-top:clamp(72px,9vw,120px);padding-block:0 96px}
         <h3>How it's built</h3>
         <ul>
           <li>three.js with white hairlines on dark planes, so the model looks like GIMA's drawings, not a glossy render.</li>
-          <li>Layers named shell, infrastructure, ceilings, finishes, joinery and lighting, matching the scope stack.</li>
+          <li>Layers follow build order (shell, infrastructure, ceilings, finishes, joinery, lighting) and use the scope stack's trade names where the two overlap.</li>
           <li>Under 2.5 MB per model on desktop and 1.2 MB on mobile. It never auto-rotates or loads above the fold.</li>
         </ul>
       </div>
@@ -1223,7 +1227,7 @@ footer{margin-top:clamp(72px,9vw,120px);padding-block:0 96px}
       <p>Buttons. One red primary per screen. Registration ticks appear at the corners on hover and focus.</p>
     </div>
     <div class="ui-cell">
-      <div class="demo"><a class="dlink" href="#mb-03">View all projects<span class="e a"></span><span class="e b"></span></a><a class="dlink demo" href="#mb-03">Hover state<span class="e a"></span><span class="e b"></span></a></div>
+      <div class="demo"><a class="dlink" href="#mb-07">View all projects<span class="e a"></span><span class="e b"></span></a><a class="dlink demo" href="#mb-03">Hover state<span class="e a"></span><span class="e b"></span></a></div>
       <p>Links. The underline draws as a dimension line with ticked ends.</p>
     </div>
     <div class="ui-cell">
@@ -1239,7 +1243,7 @@ footer{margin-top:clamp(72px,9vw,120px);padding-block:0 96px}
     </div>
     <div class="ui-cell wide">
       <div class="demo"><div class="title-block-demo ticked" data-ticks><span><span class="label" style="color:var(--white)">P-03 · [Brand]</span><br><span class="label">Download case sheet (PDF)</span></span><img src="assets/logo-wordmark-white.png" alt="" width="42" style="width:42px"></div></div>
-      <p>Title block. Fixed at the bottom right on desktop, like the corner of a drawing sheet: current project, download link and the animation setting. This page has a working one. Phones don't show it.</p>
+      <p>Title block. Fixed at the bottom right on desktop, like the corner of a drawing sheet: current project, download link and the animation setting. This page has a simplified one that tracks the current sheet. Phones don't show it.</p>
     </div>
     <div class="light-sheet">
       <div class="ls-head">
@@ -1266,7 +1270,7 @@ footer{margin-top:clamp(72px,9vw,120px);padding-block:0 96px}
     <p class="label lead-red">MB-13 · Voice</p>
     <div class="sh-main">
       <h2>State, don't sell</h2>
-      <p>Short sentences, facts in place of adjectives, no "best" or "leading". Every line below uses only what GIMA's profile and guideline already say.</p>
+      <p>Short sentences, facts in place of adjectives, no "best" or "leading". Every line below is built from GIMA's profile and guideline, or from what you told us about the business.</p>
     </div>
   </div>
   <ul class="voice">
@@ -1274,7 +1278,7 @@ footer{margin-top:clamp(72px,9vw,120px);padding-block:0 96px}
     <li>Infrastructure. Finishing. Furniture. One team from shell to opening.</li>
     <li>From 11 m² to over 3,000 m². Since 1980.</li>
     <li>Turnkey means you hand us the shell and the date.</li>
-    <li>Forty-five years in, the aim is to be the one clients never have to worry about.</li>
+    <li>The ambition is not to be the biggest firm. It is to be the one clients never have to worry about.</li>
   </ul>
   <div class="voice-rules">
     <div><h3>Only what's on file</h3><p>Every figure, client, city and date is verified or it doesn't appear.</p></div>
@@ -1290,34 +1294,34 @@ footer{margin-top:clamp(72px,9vw,120px);padding-block:0 96px}
     <p class="label lead-red">MB-14 · References</p>
     <div class="sh-main">
       <h2>What to look at, and what to take from it</h2>
-      <p>Each reference is here for one specific technique, not its overall look. The websites were found through search; our research environment couldn't open them directly, so please check each link yourself before we discuss.</p>
+      <p>Each reference is here for one specific technique, not its overall look. Websites change often, so please open each one before we meet and we'll walk through them together.</p>
     </div>
   </div>
   <div class="refs">
     <div>
       <span class="label">Websites</span>
       <ul class="ref-list">
-        <li><a href="https://www.herzogdemeuron.com/index/projects/complete-works.html">Herzog &amp; de Meuron · Complete works</a><span class="u">herzogdemeuron.com</span><p>A numbered, exhaustive project index. The model for the register: every project filed, nothing hidden.</p></li>
-        <li><a href="https://www.checklandkindleysides.com/our-work">Checkland Kindleysides · Our work</a><span class="u">checklandkindleysides.com</span><p>The closest peer: a retail design firm with decades of brand work. How they present client brands and scope.</p></li>
-        <li><a href="https://universaldesignstudio.com/work">Universal Design Studio · Work</a><span class="u">universaldesignstudio.com</span><p>Retail and hospitality interiors. Filtering by sector without losing the sense of volume.</p></li>
-        <li><a href="https://becklondon.uk/our-work/">BECK London · Our work</a><span class="u">becklondon.uk</span><p>A fit-out contractor, not a designer. How a builder presents delivery credibility.</p></li>
-        <li><a href="https://www.designbyroar.com/">Roar, Dubai</a><span class="u">designbyroar.com</span><p>A regional benchmark for retail and hospitality interiors in the Middle East.</p></li>
-        <li><a href="https://creativedesignegypt.com/en">Creative3Design, Cairo</a><span class="u">creativedesignegypt.com</span><p>A local competitor. Useful as the bar to clear, not as a model.</p></li>
-        <li><a href="https://lusion.co/">Lusion</a><span class="u">lusion.co</span><p>Award-winning WebGL studio. The standard for how smooth real-time 3D can feel.</p></li>
-        <li><a href="https://aristidebenoist.com/">Aristide Benoist</a><span class="u">aristidebenoist.com</span><p>Image list with WebGL transitions. The timing of row-to-image previews.</p></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="https://www.herzogdemeuron.com/index/projects/complete-works.html">Herzog &amp; de Meuron · Complete works</a><span class="u">herzogdemeuron.com</span><p>A numbered, exhaustive project index. The model for the register: every project filed, nothing hidden.</p></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="https://www.checklandkindleysides.com/our-work">Checkland Kindleysides · Our work</a><span class="u">checklandkindleysides.com</span><p>The closest peer: a retail design firm with decades of brand work. How they present client brands and scope.</p></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="https://universaldesignstudio.com/work">Universal Design Studio · Work</a><span class="u">universaldesignstudio.com</span><p>Retail and hospitality interiors. Filtering by sector without losing the sense of volume.</p></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="https://becklondon.uk/our-work/">BECK London · Our work</a><span class="u">becklondon.uk</span><p>A fit-out contractor, not a designer. How a builder presents delivery credibility.</p></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="https://www.designbyroar.com/">Roar, Dubai</a><span class="u">designbyroar.com</span><p>A regional benchmark for retail and hospitality interiors in the Middle East.</p></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="https://creativedesignegypt.com/en">Creative3Design, Cairo</a><span class="u">creativedesignegypt.com</span><p>A local competitor. Useful as the bar to clear, not as a model.</p></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="https://lusion.co/">Lusion</a><span class="u">lusion.co</span><p>Award-winning WebGL studio. The standard for how smooth real-time 3D can feel.</p></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="https://aristidebenoist.com/">Aristide Benoist</a><span class="u">aristidebenoist.com</span><p>Image list with WebGL transitions. The timing of row-to-image previews.</p></li>
       </ul>
     </div>
     <div>
       <span class="label">Technical references, checked</span>
       <ul class="ref-list">
-        <li><a href="https://github.com/codrops/ImageRevealHover">Codrops · ImageRevealHover</a><span class="u">github.com/codrops/ImageRevealHover</span><p>Code starting point for the register's preview. We use the fixed-frame version, not the cursor-following one.</p></li>
-        <li><a href="https://threejs.org">three.js</a><span class="u">threejs.org</span><p>The 3D renderer: hairline edges, flat fills, render only when something changes.</p></li>
-        <li><a href="https://gsap.com/docs/v3/Plugins/ScrollTrigger/">GSAP ScrollTrigger</a><span class="u">gsap.com</span><p>The once-only reveals, the slab fill and the home-page image sequence. Free for commercial use.</p></li>
-        <li><a href="https://fspy.io">fSpy</a><span class="u">fspy.io</span><p>Matches the 3D camera to the real store photo, so the model dissolves into the built room.</p></li>
-        <li><a href="https://gltf-transform.dev">glTF Transform</a><span class="u">gltf-transform.dev</span><p>Shrinks the design team's exports to web size, and fails the build if a model is too heavy.</p></li>
-        <li><a href="https://help.sketchup.com/en/sketchup/working-gltf-files">SketchUp GLB export</a><span class="u">help.sketchup.com</span><p>The export path we hand to GIMA's design team.</p></li>
-        <li><a href="https://github.com/sparkjsdev/spark">Spark</a><span class="u">github.com/sparkjsdev/spark</span><p>Later phase: photoreal captures of one or two stores still trading, if a test capture passes.</p></li>
-        <li><a href="https://github.com/matterport/showcase-sdk">Matterport Showcase SDK</a><span class="u">github.com/matterport/showcase-sdk</span><p>Two ideas only: the dollhouse cutaway view and the tag model. Its own embed reads like a property listing.</p></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="https://github.com/codrops/ImageRevealHover">Codrops · ImageRevealHover</a><span class="u">github.com/codrops/ImageRevealHover</span><p>Code starting point for the register's preview. We use the fixed-frame version, not the cursor-following one.</p></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="https://threejs.org">three.js</a><span class="u">threejs.org</span><p>The 3D renderer: hairline edges, flat fills, render only when something changes.</p></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="https://gsap.com/docs/v3/Plugins/ScrollTrigger/">GSAP ScrollTrigger</a><span class="u">gsap.com</span><p>The once-only reveals, the slab fill and the home-page image sequence. Free for commercial use.</p></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="https://fspy.io">fSpy</a><span class="u">fspy.io</span><p>Matches the 3D camera to the real store photo, so the model dissolves into the built room.</p></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="https://gltf-transform.dev">glTF Transform</a><span class="u">gltf-transform.dev</span><p>Shrinks the design team's exports to web size, and fails the build if a model is too heavy.</p></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="https://help.sketchup.com/en/sketchup/working-gltf-files">SketchUp GLB export</a><span class="u">help.sketchup.com</span><p>The export path we hand to GIMA's design team.</p></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="https://github.com/sparkjsdev/spark">Spark</a><span class="u">github.com/sparkjsdev/spark</span><p>Later phase: photoreal captures of one or two stores still trading, if a test capture passes.</p></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="https://github.com/matterport/showcase-sdk">Matterport Showcase SDK</a><span class="u">github.com/matterport/showcase-sdk</span><p>Two ideas only: the dollhouse cutaway view and the tag model. Its own embed reads like a property listing.</p></li>
       </ul>
     </div>
   </div>
@@ -1339,7 +1343,7 @@ footer{margin-top:clamp(72px,9vw,120px);padding-block:0 96px}
     <li>Claiming "designed by GIMA" on franchise work, or implying the brand was the client when it was a franchisee.</li>
     <li>Invented counts, totals or on-time rates, and numbers that count up.</li>
     <li>Red as a large field beyond the logo, red body text on black, two reds, red glows or gradients.</li>
-    <li>Rounded corners, glass effects, drop shadows, and diagonals at any angle other than 75°.</li>
+    <li>Rounded corners, glass effects, drop shadows, and diagonal cuts at any angle other than 75°.</li>
     <li>3D above the fold, auto-rotating models, game-style walkthroughs, glossy photoreal renders.</li>
     <li>Custom cursors, cursor trails, parallax, smooth-scroll hijacking, scrambled text.</li>
     <li>Stock or AI-generated interiors shown as GIMA work.</li>
@@ -1543,41 +1547,45 @@ footer{margin-top:clamp(72px,9vw,120px);padding-block:0 96px}
     zo.observe(document.querySelector('.board')); zo.observe(document.querySelector('footer'));
   } else { tbox.classList.remove('is-off'); }
   if ('IntersectionObserver' in window) {
-    var to = new IntersectionObserver(function(es){
-      es.forEach(function(e){ if (e.isIntersecting) tb.textContent = e.target.getAttribute('data-sheet'); });
-    }, {rootMargin:'-45% 0px -50% 0px'});
+    var onSheet = function(es){ es.forEach(function(e){ if (e.isIntersecting) tb.textContent = e.target.getAttribute('data-sheet'); }); };
+    var to;
+    try { to = new IntersectionObserver(onSheet, {root: document, rootMargin:'-45% 0px -50% 0px'}); }
+    catch (err) { to = new IntersectionObserver(onSheet, {rootMargin:'-45% 0px -50% 0px'}); }
     document.querySelectorAll('[data-sheet]').forEach(function(s){ to.observe(s); });
   }
 
   /* demo form */
   document.getElementById('demo-form').addEventListener('submit', function(e){
     e.preventDefault();
-    document.getElementById('form-ok').textContent = 'Example form: nothing was sent. On the live site a project director calls back within [1 working day].';
+    document.getElementById('form-ok').textContent = 'Example form: nothing was sent. On the live site a named GIMA contact calls back within [response time, see Q6].';
   });
 
   /* 3D: load on tap */
   var a900 = document.getElementById('a900');
   var loadBtn = a900.querySelector('[data-3d-load]');
-  var started = false;
-  function start(){
+  var started = false, pendingBtn = null, refocus = false;
+  function start(trigger){
     if (started) return; started = true;
-    loadBtn.textContent = 'Loading…'; loadBtn.disabled = true;
+    refocus = document.activeElement === loadBtn || (!!trigger && document.activeElement === trigger);
+    loadBtn.textContent = 'Loading…'; loadBtn.setAttribute('aria-disabled', 'true');
     function go(){
       loadBtn.remove();
-      var ok = window.initStore3D && window.initStore3D(a900, { animate: window.gimaAnimate() });
+      var ok = window.initStore3D && window.initStore3D(a900, { autoplay: !pendingBtn });
       var poster = a900.querySelector('[data-3d-poster]');
       if (ok && poster) poster.remove();
+      if (ok && pendingBtn) pendingBtn.click();
+      if (refocus) (pendingBtn || a900.querySelector('[data-step]')).focus();
     }
     if (window.THREE) return go();
-    var s = document.createElement('script');
-    s.src = 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js';
-    s.onload = go;
-    s.onerror = function(){ loadBtn.remove(); a900.querySelector('[data-3d-fallback]').hidden = false; };
-    document.head.appendChild(s);
+    var sc = document.createElement('script');
+    sc.src = 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js';
+    sc.onload = go;
+    sc.onerror = function(){ loadBtn.remove(); a900.querySelector('[data-3d-fallback]').hidden = false; if (refocus) a900.querySelector('[data-step]').focus(); };
+    document.head.appendChild(sc);
   }
-  loadBtn.addEventListener('click', start);
+  loadBtn.addEventListener('click', function(){ start(); });
   a900.querySelectorAll('[data-step],[data-play],[data-explode]').forEach(function(b){
-    b.addEventListener('click', function(){ if (!started) start(); }, {capture:true});
+    b.addEventListener('click', function(){ if (!a900.__store3d) { pendingBtn = b; start(b); } }, {capture:true});
   });
 })();
 </script>
@@ -1643,7 +1651,7 @@ window.initStore3D = function(root, opts){
       box(g, m, W, .3, D, 0, -.15, 0); box(g, m, W, H, .25, 0, H/2, -D/2); box(g, m, .25, H, D, -W/2, H/2, 0);
       box(g, m, .5, H, .5, 2.5, H/2, -D/2 + .4); box(g, m, .5, H, .5, -W/2 + .4, H/2, 1.2);
     }},
-    { name: 'Infrastructure & MEP', text: 'Air-conditioning ducts, power, fire-fighting and data. The work shoppers never see, built by our own team.', build: function(g){
+    { name: 'Infrastructure & MEP', text: 'Air-conditioning, power, fire-fighting and data: the work shoppers never see.', build: function(g){
       var m = mats(0x9aa0a6);
       box(g, m, W - 1.2, .5, .9, .2, H - .45, -1.2); box(g, m, .7, .4, D - 2, 3.2, H - .5, .6); box(g, m, .7, .4, D - 2, -2.6, H - .5, .6);
       var p = mats(0x8a8f94); tube(g, p, .06, W - 1.5, 0, H - .15, 2.2); tube(g, p, .06, W - 1.5, 0, H - .15, -2.8);
@@ -1758,7 +1766,6 @@ window.initStore3D = function(root, opts){
   if (explodeBtn) explodeBtn.addEventListener('click', function(){
     st.exploded = !st.exploded;
     explodeBtn.setAttribute('aria-pressed', st.exploded ? 'true' : 'false');
-    explodeBtn.textContent = st.exploded ? 'Assemble' : 'Explode layers';
     if (!anim()) { st.explodeT = st.exploded ? 1 : 0; resize(); }
     kick();
   });
@@ -1789,7 +1796,7 @@ window.initStore3D = function(root, opts){
   document.addEventListener('visibilitychange', function(){ if (!document.hidden) kick(); });
 
   applyStep(LAST, true);
-  if (anim()) play();
+  if (anim() && !(opts && opts.autoplay === false)) play();
   root.__store3d = { applyStep: applyStep };
   return true;
 };
